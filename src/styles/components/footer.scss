@@ -1,0 +1,39 @@
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    & a:hover {
+        transition: 0.2s;
+        color: var(--secondary);
+    }
+    & nav {
+        margin: 3rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        text-transform: capitalize;
+        & article {
+            width: 25%;
+            & li {
+                margin: 0.3rem 0rem;
+            }
+        }
+    }
+    & section {
+        margin: 8rem 0rem 1rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        article {
+            &:first-child {
+                font-size: 0.8rem;
+                & a {
+                    margin-right: 3rem;
+                }
+            }
+            &:last-child {
+                font-size: 1.8rem;
+            }
+        } 
+        
+    }
+}

@@ -1,0 +1,96 @@
+header {
+    & nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .logo {
+            font-size: 2.5rem;
+        }
+        & ul {
+            display: flex;
+            & li {
+                margin-left: 4rem;
+            }
+            & .active {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    header {
+        & nav {
+            & ul {
+                & li {
+                    font-size: 1rem;
+                }
+            }
+            .logo {
+                font-size: 2.3rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    header {
+        & nav {
+            & ul {
+                & li {
+                    margin-left: 2rem;
+                    font-size: 0.9rem;
+                }
+            }
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    header {
+        & nav {
+            & ul {
+                & li {
+                    font-size: 0.8rem;
+                }
+            }
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    header {
+        height: 100vh;
+        & nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            & .logo {
+                margin: 0 auto;
+                font-size: 2.5rem;
+            }
+            & ul {
+                align-items: center;
+                flex-direction: column;
+                margin-top: 2rem;
+                & li {
+                    margin: 1rem 0rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        & .invisible {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}
