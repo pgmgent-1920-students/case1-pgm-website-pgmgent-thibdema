@@ -88,6 +88,10 @@ module.exports = (env, argv) => {
           from: './src/icons',
           to: 'icons',
         },
+        {
+          from: './src/videos',
+          to: 'videos',
+        },
       ]),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
