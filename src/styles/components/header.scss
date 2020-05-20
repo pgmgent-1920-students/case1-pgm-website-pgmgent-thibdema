@@ -10,6 +10,7 @@ header {
             display: flex;
             & li {
                 margin-left: 4rem;
+                text-transform: capitalize;
             }
             & .active {
                 font-weight: bold;
@@ -66,7 +67,12 @@ header {
 
 @media only screen and (max-width: 720px) {
     header {
-        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+        background-color: var(--white);
         & nav {
             display: flex;
             align-items: center;

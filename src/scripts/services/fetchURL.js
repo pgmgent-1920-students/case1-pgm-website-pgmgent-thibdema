@@ -1,3 +1,5 @@
+import {BAASURL} from './config';
+
 // Get data objects from url via fetch API
 export async function getDATA(url) {
   const content = await fetch(url)
@@ -28,3 +30,6 @@ export async function postDATA(url, obj) {
   return content;
 }
 
+export const studentsDATA = async () => {
+  const data = await getDATA(`${BAASURL}students.json`);
+};

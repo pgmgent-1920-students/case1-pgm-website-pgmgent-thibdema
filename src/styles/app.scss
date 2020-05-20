@@ -4,10 +4,16 @@
 @import './base/fonts.scss';
 @import './base/main.scss';
 @import './base/typography.scss';
+@import './base/buttons.scss';
+
 // 2 Utils importing
+@import './utils/effects.scss';
 
 // 3 Layout importing
 @import './layout/container.scss';
+@import './layout/sections.scss';
+@import './layout/row.scss';
+
 // @import 'https://unpkg.com/browse/bootstrap@4.3.1/dist/css/bootstrap-grid.css';
 
 // 4 Components importing
@@ -17,6 +23,7 @@
 @import './components/footer.scss';
 
 // 5 Pages importing
+@import './pages/home.scss';
 
 // 6 Themes importing
 

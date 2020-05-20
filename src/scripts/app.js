@@ -5,12 +5,21 @@ import '../styles/app.scss';
 import Navigo from 'navigo';
 import nunjucks from 'nunjucks';
 
-// Import functions & variables
+// Import general functions & variables
 import { appContent } from "./services/config";
 import { makeSiteUnique } from "./services/unique";
 
+
+// Import specific functions for each page
+import {studentsDATA} from './services/fetchURL';
+
+
+
+
+
 // Import components
 import { toggleMenu } from './components/hamburgermenu';
+
 
 // Configuration nunjucks
 nunjucks.configure('templates', {autoescape: true});
@@ -18,6 +27,8 @@ nunjucks.configure('templates', {autoescape: true});
 // Configuration navigo router
 let router = new Navigo(document.location.origin, true, '#!');
 router.updatePageLinks();
+
+
 
 // Navigo routering pages
 router.on({
@@ -38,6 +49,9 @@ router.on({
     appContent.innerHTML = template;
   },
 }).resolve();
+
+
+
 
 // Main data that is needed on all the pages of the app
 const app =  {

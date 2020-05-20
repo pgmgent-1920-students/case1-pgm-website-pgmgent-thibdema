@@ -1,5 +1,7 @@
 h1 {
-
+    font-size: 42px;
+    color: var(--primary);
+    margin: 1rem 0rem 1.5rem 0rem;
 }
 
 h2 {
@@ -13,4 +15,50 @@ h3 {
 
 p {
     line-height: 1.5;
+}
+
+.context {
+    font-size: 1.25rem;
+    font-weight: UltraLight;
+    color: var(--grey);
+}
+
+@media only screen and (max-width: 1360px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+
+    }
+
+    .context {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .context {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
 }
