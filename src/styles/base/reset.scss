@@ -20,3 +20,8 @@ ul {
 li {
   list-style-type: none;
 }
+
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+}

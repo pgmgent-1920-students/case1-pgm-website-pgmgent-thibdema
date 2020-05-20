@@ -11,8 +11,7 @@ import { makeSiteUnique } from "./services/unique";
 
 
 // Import specific functions for each page
-import {studentsDATA} from './services/fetchURL';
-
+import { mainHome } from './pages/home';
 
 
 
@@ -35,6 +34,7 @@ router.on({
   '/': () => {
     let template = nunjucks.render('home.html',{});
     appContent.innerHTML = template;
+    mainHome();
   },
   '/opleidingsinfo': () => {
     let template = nunjucks.render('opleidingsinfo.html',{});

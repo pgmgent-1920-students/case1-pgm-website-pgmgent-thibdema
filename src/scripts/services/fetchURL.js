@@ -31,5 +31,9 @@ export async function postDATA(url, obj) {
 }
 
 export const studentsDATA = async () => {
-  const data = await getDATA(`${BAASURL}students.json`);
+  return await getDATA(`${BAASURL}students.json`);
+};
+
+export const coursesDATA = async () => {
+  return await getDATA(`${BAASURL}courses.json`);
 };

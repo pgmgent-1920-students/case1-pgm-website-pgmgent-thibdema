@@ -11,3 +11,37 @@
         transform: translateY(-20px);
     }
 }
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-100vw / 9 * 20))}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(100% * 9 * 20);
+    }
+}

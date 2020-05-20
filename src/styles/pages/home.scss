@@ -1,5 +1,5 @@
 .home {
-     & .intro {
+    & .intro {
         padding: 4rem 0rem;
         & article {
             padding-top: 0.8rem;
@@ -9,8 +9,35 @@
             border-radius: 10px;
             animation: 2s bounce ease infinite;
         }
-     }
+    }
+    & .vakken {
+        text-align: center;
+        & .banner {
+            
+        }
+        & #banner-courses {
+            display: flex;
+            align-items: flex-end;
+            width: max-content;
+            color: var(--grey);
+            border-top: 1px solid var(--grey);
+            border-bottom: 1px solid var(--grey);
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                & i {
+                    font-size: 3rem;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
 }
+
+
 
 
 @media only screen and (max-width: 1360px) {
@@ -51,6 +78,19 @@
 }
 
 @media only screen and (max-width: 540px) {
+    .home {
+        & .intro {
+            display: flex;
+            align-items: center;
+            & article {
+                padding-left: 0rem;
+            }
+            & video {
+                margin-top: 0rem;
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 390px) {

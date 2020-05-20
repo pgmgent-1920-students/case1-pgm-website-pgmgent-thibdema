@@ -5,3 +5,33 @@
         width: 50%;
     }
 }
+
+@media only screen and (max-width: 1360px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 720px) {
+}
+
+@media only screen and (max-width: 540px) {
+    .row {
+        flex-direction: column;
+        & > * {
+            width: 100%;
+        }
+        & .context, button {
+            // display: none;
+        }
+        // & video, img {
+        //     display: none;
+        // }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+}

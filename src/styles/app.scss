@@ -2,7 +2,6 @@
 @import './base/reset.scss';
 @import './base/variables.scss';
 @import './base/fonts.scss';
-@import './base/main.scss';
 @import './base/typography.scss';
 @import './base/buttons.scss';
 
@@ -21,6 +20,7 @@
 @import './components/hamburgerbutton.scss';
 @import './components/header.scss';
 @import './components/footer.scss';
+@import './components/main.scss';
 
 // 5 Pages importing
 @import './pages/home.scss';

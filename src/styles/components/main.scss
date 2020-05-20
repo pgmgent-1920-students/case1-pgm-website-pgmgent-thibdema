@@ -1,0 +1,26 @@
+$allItems: "img", "video", "p", "h1", "h2", "h3", "article", "section", "div";
+
+main {
+}
+
+@media only screen and (max-width: 1360px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 720px) {
+    main {
+        margin-top: 5rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+}

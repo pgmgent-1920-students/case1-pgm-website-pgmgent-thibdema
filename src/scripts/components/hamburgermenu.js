@@ -4,6 +4,8 @@ const closebtn = document.querySelector('.fa-times');
 const navul = document.querySelector('header nav ul');
 const navitems = document.querySelectorAll('nav a');
 const header = document.querySelector('header');
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 
 export function toggleMenu() {
   hamdiv.addEventListener("click", (ev) => {
@@ -26,6 +28,8 @@ function closeMenu() {
   closebtn.classList.add('invisible');
   navul.classList.add('invisible');
   header.classList.remove('fullheight');
+  main.style.display='block';
+  footer.style.display='block';
 }
 
 function openMenu() {
@@ -33,4 +37,6 @@ function openMenu() {
   hamburgerbtn.classList.add('invisible');
   navul.classList.remove('invisible');
   header.classList.add('fullheight');
+  main.style.display='none';
+  footer.style.display='none';
 }
