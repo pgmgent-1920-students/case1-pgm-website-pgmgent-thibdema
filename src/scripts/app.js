@@ -13,12 +13,8 @@ import { makeSiteUnique } from "./services/unique";
 // Import specific functions for each page
 import { mainHome } from './pages/home';
 
-
-
-
 // Import components
-import { toggleMenu } from './components/hamburgermenu';
-
+import {toggleMenu, displaySocialMedia} from './components/';
 
 // Configuration nunjucks
 nunjucks.configure('templates', {autoescape: true});
@@ -57,6 +53,7 @@ router.on({
 const app =  {
   init(){
     toggleMenu();
+    displaySocialMedia();
     makeSiteUnique.main();
   },
 };

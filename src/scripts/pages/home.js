@@ -10,7 +10,6 @@ class Home {
     let tempStr = '';
     for (let i = 0; i < 20; i++) {
       data.forEach(course => {
-        console.log(course);
         tempStr += `
         <li>
           <span class="courselogo">${course.icon}</span>
@@ -19,9 +18,7 @@ class Home {
         `;
       });
     }
-    
     this.DOMBannerVakken.innerHTML += tempStr;
-    console.log(data);
   }
 }
 

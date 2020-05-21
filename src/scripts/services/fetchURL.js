@@ -37,3 +37,7 @@ export const studentsDATA = async () => {
 export const coursesDATA = async () => {
   return await getDATA(`${BAASURL}courses.json`);
 };
+
+export const socialMediaDATA = async () => {
+  return await getDATA(`${BAASURL}social-media.json`);
+};

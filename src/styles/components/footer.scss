@@ -32,6 +32,9 @@ footer {
             }
             &:last-child {
                 font-size: 1.8rem;
+                & .social-media__item {
+                    margin-left: 0.5rem;
+                }
             }
         } 
         

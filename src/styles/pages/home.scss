@@ -35,6 +35,24 @@
             }
         }
     }
+
+    & .follow-us {
+        background-color: var(--primary);
+        text-align: center;
+        h1 {
+            color: var(--secondary);
+        }
+        
+        &__list {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            & .social-media__item {
+                margin: 1rem;
+            }
+        }
+    }
 }
 
 
