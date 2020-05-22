@@ -58,6 +58,15 @@
 
     & .lastBlogPosts {
         text-align: center;
+        &__seeMore {
+            transition: 0.3s;
+            text-align: right;
+            float: right;
+            &:hover {
+                transition: 0.3s;
+                font-size: 1.1rem;
+            }
+        }
     }
 }
 
