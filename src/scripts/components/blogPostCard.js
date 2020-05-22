@@ -1,0 +1,13 @@
+export function makeBlogPostCard(data) {
+  return `
+    <li class="blogPostCard">
+      <a href="#!/blogpost/detail/${data.id}" data-navigo>
+        <div  class="blogPostCard__thumbnail" style="background-image: url(${data.thumbnail})";></div>
+        <div class="blogPostCard__text">
+          <p class="blogPostCard__title">${data.title}</p>
+          <p class="blogPostCard__subtitle">${data.subtitle}</p>
+        </div>
+      </a>
+    </li>
+  `;
+}

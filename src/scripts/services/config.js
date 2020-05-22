@@ -5,3 +5,7 @@ export const owner = 'Thibaut De Maerteleire';
 
 // MAIN BAAS URL REPO
 export const BAASURL = "https://pgmgent-1920-students.github.io/case1-pgm-website-baas-pgmgent-thibdema/";
+
+
+// Home Page
+export const amountOfBlogPostsDisplayed = 4;

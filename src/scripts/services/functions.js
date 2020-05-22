@@ -5,5 +5,6 @@ export function sleep(ms) {
 
 // Shuffling array
 export function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
+  const shuffledArray = array.sort(() => Math.random() - 0.5);
+  return shuffledArray;
 }

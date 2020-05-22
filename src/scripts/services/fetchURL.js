@@ -31,7 +31,8 @@ export async function postDATA(url, obj) {
 }
 
 export const studentsDATA = async () => {
-  return await getDATA(`${BAASURL}students.json`);
+  const data = await getDATA(`${BAASURL}students.json`);
+  return addID(data);
 };
 
 export const coursesDATA = async () => {
@@ -40,4 +41,17 @@ export const coursesDATA = async () => {
 
 export const socialMediaDATA = async () => {
   return await getDATA(`${BAASURL}social-media.json`);
+};
+
+export const blogPostsDATA = async () => {
+  const data = await getDATA(`${BAASURL}blogposts.json`);
+  return addID(data);
+};
+
+const addID = (arr) => {
+  arr = arr.map((x, i) => {
+    x.id = i;
+    return x;
+  });
+  return arr;
 };
