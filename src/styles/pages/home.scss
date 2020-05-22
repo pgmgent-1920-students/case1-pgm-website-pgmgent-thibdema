@@ -89,12 +89,6 @@
                 &:hover {
                     transition: 0.3s;
                     filter: grayscale(0%);
-                    & + .slider__track {
-                        animation-play-state: paused;
-                    }
-                    & + .slider {
-                        animation-play-state: paused;
-                    }
                 }
             }
         }

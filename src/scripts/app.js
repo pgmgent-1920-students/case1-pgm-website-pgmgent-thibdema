@@ -46,9 +46,6 @@ router.on({
   },
 }).resolve();
 
-
-
-
 // Main data that is needed on all the pages of the app
 const app =  {
   init(){

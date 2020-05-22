@@ -13,6 +13,10 @@ $courses-item-width: 100%;
 	100% { transform: translateX(calc(-100vw / 9 * 20))}
 }
 
+@keyframes scrollPause {
+	0% { transform: translateX(0); }
+}
+
 
 // Styling
 .slider {
@@ -35,7 +39,10 @@ $courses-item-width: 100%;
 	&__track {
 		animation: scroll 40s linear infinite;
 		display: flex;
-		width: calc(100% * 9 * 20);
+        width: calc(100% * 9 * 20);
+        &:hover {
+            animation-play-state: paused;
+        }
     }
 }
 
