@@ -1,3 +1,12 @@
+
+$repeat-loop-array: 20;
+
+$students: 13;
+$students-item-width: 16rem;
+
+$courses: 9;
+$courses-item-width: 100%;
+
 // Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
