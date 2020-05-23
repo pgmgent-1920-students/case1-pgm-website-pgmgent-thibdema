@@ -6,6 +6,10 @@
     height: 100vw;
 }
 
+.reverse {
+    flex-direction: row-reverse;
+}
+
 @keyframes bounce {  
     50% {
         transform: translateY(-20px);
