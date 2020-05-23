@@ -1,7 +1,7 @@
 export function makeBlogPostCard(data) {
   return `
     <li class="blogPostCard">
-      <a href="#!/blogpost/detail/${data.id}" data-navigo>
+      <a href="#!/blog/detail/${data.id}" data-navigo>
         <div class="outer-div">
           <div class="blogPostCard__thumbnail inner-div" style="background-image: url(${data.thumbnail})";></div>
         </div>

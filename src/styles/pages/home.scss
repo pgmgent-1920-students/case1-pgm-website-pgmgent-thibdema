@@ -11,14 +11,11 @@
         }
     }
     & .vakken {
-        & .banner {
-            
-        }
         & .slider {
             border-top: 1px solid var(--grey);
             border-bottom: 1px solid var(--grey);
         }
-        & #banner-courses {
+        & #slider-courses {
             display: flex;
             align-items: flex-end;
             width: max-content;
@@ -93,6 +90,38 @@
             }
         }
     }
+    & .subscribe-now {
+        background-color: var(--white-green);
+
+        &__title {
+            font-weight: bold;
+        }
+
+        &__form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 50%;
+            margin: 0 auto;
+            &__input {
+                transition: 0.3s;
+                padding: 1rem 1rem;
+                border: 2px solid var(--grey);
+                margin-right: 1rem;
+                width: 100%;
+                font-size: 1.3rem;
+                background-color: var(--white);
+
+                &:focus {
+                    transition: 0.3s;
+                    border: 2px solid var(--primary)
+                }
+            }
+            &__submit {
+
+            }
+        }
+    }
 }
 
 
@@ -110,10 +139,26 @@
                 margin-top: 1rem;
             }
         }
+
+        & .subscribe-now {    
+            &__form {
+                &__input {
+                    padding: 1rem 1rem;
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 1140px) {
+    .home {
+        & .subscribe-now {    
+            &__form {
+                max-width: 60%;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -129,8 +174,17 @@
                 width: 90%;
             }
         }
+        & .subscribe-now {    
+            &__form {
+                &__input {
+                    padding: 0.8rem 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
     }
 }
+
 
 @media only screen and (max-width: 720px) {
     .home {
@@ -153,6 +207,16 @@
                 }
             }
         }
+        & .subscribe-now {    
+            &__form {
+                max-width: 80%;
+                &__input {
+                    padding: 0.8rem 1rem;
+                    margin-right: 0.5rem;
+                    font-size: 0.8rem;
+                }
+            }
+        }
     }
 }
 
@@ -167,6 +231,11 @@
             & video {
                 margin-top: 0rem;
                 width: 100%;
+            }
+        }
+        & .subscribe-now {    
+            &__form {
+                max-width: 90%;
             }
         }
     }

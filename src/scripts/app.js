@@ -11,10 +11,10 @@ import { makeSiteUnique } from "./services/unique";
 
 
 // Import specific functions for each page
-import { mainHome } from './pages/home';
+import { mainHome, mainBlog } from './pages';
 
 // Import components
-import {toggleMenu, displaySocialMedia} from './components/';
+import {toggleMenu, displaySocialMedia} from './components';
 
 // Configuration nunjucks
 nunjucks.configure('templates', {autoescape: true});
@@ -35,6 +35,11 @@ router.on({
   '/opleidingsinfo': () => {
     let template = nunjucks.render('opleidingsinfo.html',{});
     appContent.innerHTML = template;
+  },
+  '/blog': () => {
+    let template = nunjucks.render('blog.html',{});
+    appContent.innerHTML = template;
+    mainBlog();
   },
   '/werkplekleren': () => {
     let template = nunjucks.render('werkplekleren.html',{});

@@ -1,16 +1,16 @@
 import { coursesDATA, blogPostsDATA, studentsDATA } from '../services/fetchURL';
 import { sortBlogPosts } from '../services/sortArray';
-import { makeBlogPostCard } from '../components/blogPostCard';
+import { makeBlogPostCard } from '../components';
 import { amountOfBlogPostsDisplayed, repeatArraySlider } from '../services/config';
 
 class Home {
   constructor() {
-    this.DOMBannerVakken = document.querySelector('#banner-courses');
+    this.DOMSliderVakken = document.querySelector('#slider-courses');
     this.DOMLastBlogPosts = document.querySelector('#lastBlogPosts');
     this.DOMOurStudents = document.querySelector('#our-students');
   }
 
-  async bannerCourses() {
+  async sliderCourses() {
     const data = await coursesDATA();
     console.log(data.length)
     let tempStr = '';
@@ -24,7 +24,7 @@ class Home {
         `;
       });
     }
-    this.DOMBannerVakken.innerHTML += tempStr;
+    this.DOMSliderVakken.innerHTML += tempStr;
   }
 
   async lastBlogPosts() {
@@ -59,7 +59,7 @@ class Home {
 
 export const mainHome = async () => {
   const init = new Home;
-  init.bannerCourses();
+  init.sliderCourses();
   init.lastBlogPosts();
   init.ourStudents();
 };

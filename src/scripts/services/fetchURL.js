@@ -48,6 +48,10 @@ export const blogPostsDATA = async () => {
   return addID(data);
 };
 
+export const bannersDATA = async () => {
+  return await getDATA(`${BAASURL}banners.json`);
+};
+
 const addID = (arr) => {
   arr = arr.map((x, i) => {
     x.id = i;
