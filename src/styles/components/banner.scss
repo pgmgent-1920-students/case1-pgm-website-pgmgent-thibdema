@@ -31,3 +31,59 @@
         background-position: center;
     }
 }
+
+@media only screen and (max-width: 1360px) {
+    .banner {
+        .btn-1 {
+            margin: 1.5rem 0rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    .banner {
+        position: relative;
+        height: 20rem;
+        
+        & > * {
+            width: 100%;
+            height: 100%;
+        }
+        &__text {
+            z-index: 2;
+        }
+    
+        & .outer-div {
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+        }
+    
+        &__image {
+            filter: grayscale(1);
+            opacity: 0.2;
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .banner {
+        &__text {
+            &__title {
+                font-size: 1.2rem;
+            }
+            &__category {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+}

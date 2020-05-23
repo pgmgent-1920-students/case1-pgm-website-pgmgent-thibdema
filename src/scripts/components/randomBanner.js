@@ -36,7 +36,7 @@ const removeCurrentPageData = (data) => {
   let wrongObj, arr = [];
 
   data.map((e) => {
-    if(pageName !== e.category) {
+    if(pageName !== e.href) {
       arr.push(e)
     }
   });
