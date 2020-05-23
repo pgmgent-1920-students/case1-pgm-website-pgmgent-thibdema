@@ -1,9 +1,12 @@
 footer {
     background-color: var(--primary);
     color: var(--white);
-    & a:hover {
-        transition: 0.2s;
-        color: var(--secondary);
+    & a {
+        color: var(--white);
+        &:hover {
+            transition: 0.2s;
+            color: var(--secondary);
+        }
     }
     & nav {
         margin: 3rem 0rem;

@@ -9,6 +9,7 @@
 @import './utils/effects.scss';
 @import './utils/slider.scss';
 @import './utils/zoom-hover.scss';
+@import './utils/arrow.scss';
 
 // 3 Layout importing
 @import './layout/container.scss';
@@ -26,10 +27,12 @@
 @import './components/social-media.scss';
 @import './components/blogPostCard.scss';
 @import './components/banner.scss';
+@import './components/detail.scss';
 
 // 5 Pages importing
 @import './pages/home.scss';
 @import './pages/blog.scss';
+@import './pages/blogdetail.scss';
 
 // 6 Themes importing
 

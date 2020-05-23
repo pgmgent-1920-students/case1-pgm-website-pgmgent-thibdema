@@ -11,7 +11,7 @@ import { makeSiteUnique } from "./services/unique";
 
 
 // Import specific functions for each page
-import { mainHome, mainBlog } from './pages';
+import { mainHome, mainBlog, mainBlogDetail } from './pages';
 
 // Import components
 import {toggleMenu, displaySocialMedia} from './components';
@@ -40,6 +40,11 @@ router.on({
     let template = nunjucks.render('blog.html',{});
     appContent.innerHTML = template;
     mainBlog();
+  },
+  '/blog/detail/:id': (params) => {
+    let template = nunjucks.render('blogdetail.html',{});
+    appContent.innerHTML = template;
+    mainBlogDetail(params);
   },
   '/werkplekleren': () => {
     let template = nunjucks.render('werkplekleren.html',{});

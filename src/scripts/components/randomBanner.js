@@ -34,7 +34,7 @@ export const randomBanner = async () => {
 const removeCurrentPageData = (data) => {
   const hrefArr = window.location.href.split('/');
   const pageName = hrefArr[hrefArr.length-1];
-  let wrongObj, arr = [];
+  let arr = [];
 
   data.map((e) => {
     if(pageName !== e.href) {
