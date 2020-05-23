@@ -12,20 +12,17 @@ export const makeSiteUnique = {
     this.currentYear.forEach(e => {
       e.innerText = year;
     });
-    console.log("done year")
   },
 
   setOwner() {
     this.DOMOwner.forEach(e => {
       e.innerText = owner;
     });
-
-    console.log("done owner")
   },
 
   main() {
     this.init();
     this.updateYear();
-    this.setOwner();   
+    this.setOwner();
   }
 };

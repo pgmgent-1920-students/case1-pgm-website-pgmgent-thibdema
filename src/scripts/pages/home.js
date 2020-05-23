@@ -1,6 +1,6 @@
 import { coursesDATA, blogPostsDATA, studentsDATA } from '../services/fetchURL';
 import { sortBlogPosts } from '../services/sortArray';
-import { makeBlogPostCard } from '../components';
+import { makeBlogPostCard, randomBanner } from '../components';
 import { amountOfBlogPostsDisplayed, repeatArraySlider } from '../services/config';
 
 class Home {
@@ -12,7 +12,6 @@ class Home {
 
   async sliderCourses() {
     const data = await coursesDATA();
-    console.log(data.length)
     let tempStr = '';
     for (let i = 0; i < repeatArraySlider; i++) {
       data.forEach(course => {
@@ -62,4 +61,5 @@ export const mainHome = async () => {
   init.sliderCourses();
   init.lastBlogPosts();
   init.ourStudents();
+  randomBanner();
 };
