@@ -1,0 +1,33 @@
+.banner {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primary);
+    background-color: var(--white-green);
+    & > * {
+        width: 50%;
+        height: 100%;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__title {
+            font-size: 1.5rem;
+            color: var(--grey);
+        }
+        &__category {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: lowercase;
+        }
+    }
+
+    & .outer-div {
+        height: 20rem;
+    }
+
+    &__image {
+        background-position: center;
+    }
+}
