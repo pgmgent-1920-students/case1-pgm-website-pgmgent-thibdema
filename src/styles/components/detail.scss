@@ -4,7 +4,25 @@
 
     &__content {
         display: flex;
+        &__little {
+            font-size: 0.9rem;
+        }
     }
+
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+        &__column {
+            flex-direction: column;
+            &__center {
+                text-align: center;
+                & > div {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
     .goback {
         position: absolute;
     }
@@ -12,7 +30,6 @@
     .outer-div {
         height: 22rem;
         margin-bottom: 0.5rem;
-        border: 2px solid var(--primary);
     }
 
     .left-block {
@@ -35,6 +52,16 @@
         text-decoration: none;
     }
     
+    h4 {
+        text-align: center;
+        margin: 0.5rem auto;
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+        border-bottom: 1px solid var(--primary);
+        width: fit-content;
+    }
+
     &__text {
 
     }

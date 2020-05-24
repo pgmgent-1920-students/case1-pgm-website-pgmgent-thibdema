@@ -11,7 +11,7 @@ import { makeSiteUnique } from "./services/unique";
 
 
 // Import specific functions for each page
-import { mainHome, mainBlog, mainBlogDetail } from './pages';
+import { mainHome, mainBlog, mainBlogDetail, mainStudentDetail } from './pages';
 
 // Import components
 import {toggleMenu, displaySocialMedia} from './components';
@@ -45,6 +45,16 @@ router.on({
     let template = nunjucks.render('blogdetail.html',{});
     appContent.innerHTML = template;
     mainBlogDetail(params);
+  },
+  '/students': () => {
+    let template = nunjucks.render('students.html',{});
+    appContent.innerHTML = template;
+    mainStudents();
+  },
+  '/students/detail/:id': (params) => {
+    let template = nunjucks.render('studentdetail.html',{});
+    appContent.innerHTML = template;
+    mainStudentDetail(params);
   },
   '/werkplekleren': () => {
     let template = nunjucks.render('werkplekleren.html',{});

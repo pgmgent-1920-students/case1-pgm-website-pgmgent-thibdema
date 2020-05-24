@@ -44,7 +44,7 @@ class Home {
       data.forEach((e) => {
         tempStr += `
           <li class="our-students__item">
-            <a href="#!/students/${e.id}" data-navigo>
+            <a href="#!/students/detail/${e.id}" data-navigo>
               <div class="our-students__item__img" style="background-image: url('${e.fields.img[0].thumbnails.large.url}')"></div>
             </a>
           </li>
