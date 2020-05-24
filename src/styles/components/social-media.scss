@@ -5,6 +5,9 @@
         transition: 0.3s;
         color: var(--white);
         font-size: 2rem;
+        a {
+            color: var(--white);
+        }
         &:hover {
             transition: 0.3s;
             color: var(--secondary);
