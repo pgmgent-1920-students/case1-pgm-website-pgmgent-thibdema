@@ -11,7 +11,6 @@ export const mainStudentDetail = async (params) => {
 const displaySpecificData = (data) => {
   const DOMBlogDetail = document.querySelector('#studentdetail');
 
-  console.log(data)
   DOMBlogDetail.innerHTML = `
   <h1 class="studentdetail__title">${data.fields.name_first} ${data.fields.name_last}</h1>
   <div class="detail__content">
@@ -53,7 +52,6 @@ const addSpaces = (text) => {
 const interestsList = (text) => {
   let tempStr = '';
   const items = text.split(',');
-  console.log(items)
   items.map((e) => {
     tempStr += `<li>${e.replace(' ', '')}</li>`
   });

@@ -12,12 +12,6 @@
         margin-right: 2%;
         position: relative;
 
-
-
-        &:nth-child(5n) {
-            margin-right: 0rem;
-        }
-
         &:hover {
 
             & .inner-div {
@@ -83,7 +77,57 @@
     }
 }
 
+@media only screen and (min-width: 1360px) {
+    .personCardList {
+        .personCard:nth-child(5n) {
+            &:nth-child(5n) {
+                margin-right: 0rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1360px) {
+    .personCardList {
+        .personCard:nth-child(4n) {
+            margin-right: 0rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 720px) {
+    .personCardList {
+        .personCard:nth-child(3n) {
+            margin-right: 0rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .personCardList {
+        .personCard:nth-child(2n) {
+            margin-right: 0rem;
+        }
+    }
+}
+
 @media only screen and (max-width: 1360px) {
+    .personCardList {
+        .personCard {
+            width: 23%;
+            margin-right: 2%;
+    
+            .outer-div {
+                height: 15rem;
+            }
+    
+            &__content {
+                &__background {
+                    height: 15rem;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1140px) {
@@ -93,10 +137,31 @@
 }
 
 @media only screen and (max-width: 720px) {
+    .personCardList {
+        .personCard {
+            width: 32%;
+
+            &__content {
+                display: none;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 540px) {
+    .personCardList {
+        .personCard {
+            width: 48%;
+            margin-right: 4%;
+        }
+    }
 }
 
 @media only screen and (max-width: 390px) {
+    .personCardList {
+        .personCard {
+            width: 100%;
+            margin-right: 0%;
+        }
+    }
 }

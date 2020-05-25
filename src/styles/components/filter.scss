@@ -1,0 +1,14 @@
+.filter {
+    border: 1px solid var(--primary);
+    border-radius: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    
+    button {
+        margin: 0rem;
+    }
+}
+

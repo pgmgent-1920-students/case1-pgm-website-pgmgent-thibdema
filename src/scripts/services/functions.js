@@ -13,3 +13,9 @@ export function shuffle(array) {
 export function randomNumber(min, max) {
   return Math.floor(Math.random() * max) + min;
 }
+
+// Remove double values in array
+export const removeDoublesInArray = (array) => {
+  array.filter((item, index) => array.indexOf(item) === index);
+  return array.reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], []);
+}

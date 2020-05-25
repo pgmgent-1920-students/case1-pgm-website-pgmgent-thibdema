@@ -22,16 +22,18 @@ export const smallCard = (category, data) => {
   `;
 }
 
-export const personCard = (category, fname, lname, id, img) => {
+export const personCard = (category, id, img) => {
   return `
-  <li class="personCard">
-    <div class="outer-div">
-      <div class="personCard__thumbnail inner-div" style="background-image: url(${img})"></div>
-    </div>
-    <div class="personCard__content">
-      <a href="#!/${category}/detail/${id}" class="personCard__content__link" data-navigo>More info</a>
-      <div class="personCard__content__background"></div>
-    </div>
-  </li>
+    <li class="personCard">
+      <a href="#!/${category}/detail/${id}" class="personCard__mobile__link" data-navigo>
+        <div class="outer-div">
+          <div class="personCard__thumbnail inner-div" style="background-image: url(${img})"></div>
+        </div>
+      </a>
+      <div class="personCard__content">
+        <a href="#!/${category}/detail/${id}" class="personCard__content__link" data-navigo>More info</a>
+        <div class="personCard__content__background"></div>
+      </div>
+    </li>
   `;
 }
