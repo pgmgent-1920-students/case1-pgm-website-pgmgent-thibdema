@@ -43,6 +43,10 @@ export const socialMediaDATA = async () => {
   return await getDATA(`${BAASURL}social-media.json`);
 };
 
+export const navigationDATA = async () => {
+  return await getDATA(`${BAASURL}navigation.json`);
+};
+
 export const blogPostsDATA = async () => {
   const data = await getDATA(`${BAASURL}blogposts.json`);
   return addID(data);

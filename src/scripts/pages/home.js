@@ -1,6 +1,6 @@
 import { coursesDATA, blogPostsDATA, studentsDATA } from '../services/fetchURL';
 import { sortBlogPosts } from '../services/sortArray';
-import { makeBlogPostCard, randomBanner } from '../components';
+import { bigCard, randomBanner } from '../components';
 import { amountOfBlogPostsDisplayed, repeatArraySlider } from '../services/config';
 
 class Home {
@@ -31,7 +31,7 @@ class Home {
     let tempStr = '';
     const sortedData = sortBlogPosts(data);
     sortedData.slice(0,amountOfBlogPostsDisplayed).forEach((e) => {
-      tempStr += makeBlogPostCard(e);
+      tempStr += bigCard('blog', e);
     });
     
     this.DOMLastBlogPosts.innerHTML = tempStr;

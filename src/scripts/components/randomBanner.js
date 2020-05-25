@@ -1,6 +1,6 @@
 import { bannersDATA } from '../services/fetchURL';
 import { randomNumber } from '../services/functions';
-
+import { banner } from './banner';
 
 export const randomBanner = async () => {
   const DOMBanner = document.querySelector('#randomBanner');
@@ -11,22 +11,8 @@ export const randomBanner = async () => {
     const data = await bannersDATA();
     // Remove item that links to current page
     const dataRefactored = removeCurrentPageData(data);
-    const bannerData = dataRefactored[randomNumber(0, dataRefactored.length)];
-    const content = `
-      <div class='banner ${direction}'>
-        <div class="banner__text">
-          <p class="banner__text__title">Bekijk ook onze</p>
-          <span class='banner__text__category'>${bannerData.category}</span>
-          <a href="#!/${bannerData.href}" data-navigo>
-              <button class="btn-1">Meer info</button>
-          </a>
-        </div>
-        <div class="outer-div">
-          <div class="banner__image inner-div" style="background-image: url(${bannerData.image})" alt="image ${bannerData.category}"></div>
-        </div>
-      </div>
-    `;
-    DOMBanner.innerHTML = content;
+    const bannerData = dataRefactored[randomNumber(0, dataRefactored.length)];  
+    DOMBanner.innerHTML = banner(direction,bannerData);
   }
 };
 

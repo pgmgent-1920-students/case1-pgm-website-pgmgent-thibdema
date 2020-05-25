@@ -11,10 +11,10 @@ import { makeSiteUnique } from "./services/unique";
 
 
 // Import specific functions for each page
-import { mainHome, mainBlog, mainBlogDetail, mainStudentDetail } from './pages';
+import { mainHome, mainBlog, mainBlogDetail, mainStudentDetail, mainWieZijnWe, mainStudents } from './pages';
 
 // Import components
-import {toggleMenu, displaySocialMedia} from './components';
+import {toggleMenu, displaySocialMedia, mainNavigation, activeNavigation } from './components';
 
 // Configuration nunjucks
 nunjucks.configure('templates', {autoescape: true});
@@ -24,44 +24,49 @@ let router = new Navigo(document.location.origin, true, '#!');
 router.updatePageLinks();
 
 
-
+let template = '';
 // Navigo routering pages
 router.on({
   '/': () => {
-    let template = nunjucks.render('home.html',{});
+    template = nunjucks.render('home.html',{});
     appContent.innerHTML = template;
     mainHome();
   },
   '/opleidingsinfo': () => {
-    let template = nunjucks.render('opleidingsinfo.html',{});
+    template = nunjucks.render('opleidingsinfo.html',{});
     appContent.innerHTML = template;
   },
   '/blog': () => {
-    let template = nunjucks.render('blog.html',{});
+    template = nunjucks.render('blog.html',{});
     appContent.innerHTML = template;
     mainBlog();
   },
   '/blog/detail/:id': (params) => {
-    let template = nunjucks.render('blogdetail.html',{});
+    template = nunjucks.render('blogdetail.html',{});
     appContent.innerHTML = template;
     mainBlogDetail(params);
   },
   '/students': () => {
-    let template = nunjucks.render('students.html',{});
+    template = nunjucks.render('students.html',{});
     appContent.innerHTML = template;
     mainStudents();
   },
   '/students/detail/:id': (params) => {
-    let template = nunjucks.render('studentdetail.html',{});
+    template = nunjucks.render('studentdetail.html',{});
     appContent.innerHTML = template;
     mainStudentDetail(params);
   },
+  '/wiezijnwe': () => {
+    template = nunjucks.render('wiezijnwe.html',{});
+    appContent.innerHTML = template;
+    mainWieZijnWe();
+  },
   '/werkplekleren': () => {
-    let template = nunjucks.render('werkplekleren.html',{});
+    template = nunjucks.render('werkplekleren.html',{});
     appContent.innerHTML = template;
   },
   '/contact': () => {
-    let template = nunjucks.render('contact.html',{});
+    template = nunjucks.render('contact.html',{});
     appContent.innerHTML = template;
   },
 }).resolve();
@@ -72,9 +77,10 @@ const app =  {
     toggleMenu();
     displaySocialMedia();
     makeSiteUnique.main();
+    mainNavigation();
+    activeNavigation();
   },
 };
 
 // Initialize app
 app.init();
-

@@ -39,7 +39,7 @@ const displaySpecificData = (data) => {
       </div>
     </div>
     <div class="right-block">
-      <h3 class="studentdetail__content__subtitle">${data.fields.quote}</h3>
+      <h3 class="studentdetail__content__subtitle">${data.fields.quote_alt}</h3>
       <p class="detail__text">${addSpaces(data.fields.about)}</p>
     </div>
   </div>

@@ -23,7 +23,7 @@ export function toggleMenu() {
   });
 }
 
-function closeMenu() {
+export function closeMenu() {
   hamburgerbtn.classList.remove('invisible');
   closebtn.classList.add('invisible');
   navul.classList.add('invisible');
