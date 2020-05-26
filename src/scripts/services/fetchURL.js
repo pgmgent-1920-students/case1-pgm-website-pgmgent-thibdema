@@ -35,6 +35,11 @@ export const studentsDATA = async () => {
   return addID(data);
 };
 
+export const teachersDATA = async () => {
+  const data = await getDATA(`${BAASURL}teachers.json`);
+  return addID(data);
+};
+
 export const coursesDATA = async () => {
   return await getDATA(`${BAASURL}courses.json`);
 };
@@ -49,6 +54,11 @@ export const navigationDATA = async () => {
 
 export const blogPostsDATA = async () => {
   const data = await getDATA(`${BAASURL}blogposts.json`);
+  return addID(data);
+};
+
+export const werkpleklerenDATA = async () => {
+  const data = await getDATA(`${BAASURL}werkplekleren.json`);
   return addID(data);
 };
 

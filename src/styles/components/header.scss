@@ -11,6 +11,9 @@ header {
             & li {
                 margin-left: 4rem;
                 text-transform: capitalize;
+                & a {
+                    color: var(--primary);
+                }
             }
             & .activeNav {
                 font-weight: bold;

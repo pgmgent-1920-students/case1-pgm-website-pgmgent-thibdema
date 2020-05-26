@@ -9,7 +9,7 @@
         text-align: left;
         background-color: var(--primary);
         margin-bottom: 2rem;
-        margin-right: 2%;
+        margin-right: 2.5%;
         position: relative;
 
         &:hover {
@@ -87,7 +87,7 @@
     }
 }
 
-@media only screen and (min-width: 1140px) and (max-width: 1360px) {
+@media only screen and (min-width: 720px) and (max-width: 1360px) {
     .personCardList {
         .personCard:nth-child(4n) {
             margin-right: 0rem;
@@ -115,7 +115,7 @@
     .personCardList {
         .personCard {
             width: 23%;
-            margin-right: 2%;
+            margin-right: 2.66%;
     
             .outer-div {
                 height: 15rem;
@@ -134,15 +134,36 @@
 }
 
 @media only screen and (max-width: 960px) {
+    .personCardList {
+        .personCard {    
+            .outer-div {
+                height: 12rem;
+            }
+    
+            &__content {
+                &__background {
+                    height: 12rem;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 720px) {
     .personCardList {
         .personCard {
             width: 32%;
+            margin-right: 2%;
+
+            .outer-div {
+                height: 15rem;
+            }
 
             &__content {
                 display: none;
+                &__background {
+                    height: 15rem;
+                }
             }
         }
     }

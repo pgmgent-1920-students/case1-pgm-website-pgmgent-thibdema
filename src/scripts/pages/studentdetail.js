@@ -1,22 +1,22 @@
 import { studentsDATA } from '../services/fetchURL';
-import { randomBanner } from '../components'
+import { randomBanner } from '../components';
 
 export const mainStudentDetail = async (params) => {
-  const allPosts = await studentsDATA();
-  const data = allPosts.find((e) => e.id == params.id);
+  const allStudents = await studentsDATA();
+  const data = allStudents.find((e) => e.id == params.id);
   displaySpecificData(data);
   randomBanner();
 };
 
 const displaySpecificData = (data) => {
-  const DOMBlogDetail = document.querySelector('#studentdetail');
+  const DOMStudentDetail = document.querySelector('#studentdetail');
 
-  DOMBlogDetail.innerHTML = `
+  DOMStudentDetail.innerHTML = `
   <h1 class="studentdetail__title">${data.fields.name_first} ${data.fields.name_last}</h1>
   <div class="detail__content">
     <div class="left-block">
-      <div class="blogdetail__content__image outer-div">
-        <div class="blogdetail__content__image_bg inner-div" style="background-image: url(${data.fields.img[0].thumbnails.large.url})" alt="image ${data.title}"></div>
+      <div class="studentdetail__content__image outer-div">
+        <div class="studentdetail__content__image_bg inner-div" style="background-image: url(${data.fields.img[0].thumbnails.large.url})" alt="image ${data.title}"></div>
       </div>
       <div class="detail__flex">
         <div class="detail__flex__column__center">
