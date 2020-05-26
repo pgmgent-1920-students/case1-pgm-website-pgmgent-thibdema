@@ -43,23 +43,25 @@
     }
 }
 
-@media only screen and (max-width: 1360px) {        
-    .bigCard {
+@media only screen and (max-width: 1360px) {
+    .bigCardList {
+        .bigCard {
 
-        &__text {
-        }
-        &__title {
-            font-size: 1.5rem;
-        }
-        &__subtitle {
-            font-size: 1rem;
-        }
-        & .outer-div {
-            height: 15rem;
-        }
-
-        &__thumbnail {
-
+            &__text {
+            }
+            &__title {
+                font-size: 1.5rem;
+            }
+            &__subtitle {
+                font-size: 1rem;
+            }
+            & .outer-div {
+                height: 15rem;
+            }
+    
+            &__thumbnail {
+    
+            }
         }
     }
 }
@@ -67,43 +69,49 @@
 @media only screen and (max-width: 1140px) {
 }
 
-@media only screen and (max-width: 960px) {        
-    .bigCard {
-        width: 49%;
-        
-        &__text {
-        }
-        &__title {
-            font-size: 1.1rem;
-        }
-        &__subtitle {
-            font-size: 0.8rem;
-        }
-        & .outer-div {
-            height: 10rem;
-        }
-
-        &__thumbnail {
+@media only screen and (max-width: 960px) {  
+    .bigCardList {
+        .bigCard {
+            width: 49%;
+            
+            &__text {
+            }
+            &__title {
+                font-size: 1.1rem;
+            }
+            &__subtitle {
+                font-size: 0.8rem;
+            }
+            & .outer-div {
+                height: 10rem;
+            }
+    
+            &__thumbnail {
+            }
         }
     }
 }
 
 @media only screen and (max-width: 720px) {
-    .bigCard {
-        width: 100%;
-        &__title {
-            font-size: 1.2rem;
-        }
-        & .outer-div {
-            height: 18rem;
+    .bigCardList {
+        .bigCard {
+            width: 100%;
+            &__title {
+                font-size: 1.2rem;
+            }
+            & .outer-div {
+                height: 18rem;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 540px) {
-    .bigCard {
-        & .outer-div {
-            height: 15rem;
+    .bigCardList {
+        .bigCard {
+            & .outer-div {
+                height: 15rem;
+            }
         }
     }
 }
