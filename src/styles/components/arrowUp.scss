@@ -1,0 +1,50 @@
+#arrowUp {
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    color: var(--white-green);
+    border: 1px solid var(--white-green);
+    transition: 0.3s;
+    z-index: 999;
+    &:hover {
+        transition: 0.3s;
+        background-color: var(--white-green);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+    }
+
+    i {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+}
+
+@media only screen and (max-width: 1140px) {
+    #arrowUp {
+        padding: 1.2rem;
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 720px) {
+    #arrowUp {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+}

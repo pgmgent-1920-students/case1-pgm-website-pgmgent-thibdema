@@ -14,7 +14,7 @@ import { makeSiteUnique } from "./services/unique";
 import { FunctionRouter } from './pages';
 
 // Import components
-import { displaySocialMedia } from './components';
+import { displaySocialMedia, arrowUp } from './components';
 
 // Import layout
 import {toggleMenu, mainNavigation, activeNavigation, footer } from './layout';
@@ -95,6 +95,7 @@ const app =  {
     mainNavigation();
     activeNavigation();
     footer();
+    arrowUp();
   },
 };
 
