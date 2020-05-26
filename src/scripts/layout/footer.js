@@ -19,7 +19,7 @@ class Footer {
     let tempStr = '';
     const data = await werkpleklerenDATA();
     console.log(data)
-    data.map((e) => tempStr += `<li><a href="${e.href}" target="_blank" rel="noopener noreferrer"></a></li>`);
+    data.map((e) => tempStr += `<li><a href="${e.href}" target="_blank" rel="noopener noreferrer">${e.category}</a></li>`);
     DOMWerkpleklerenList.innerHTML = tempStr;
   }
 }

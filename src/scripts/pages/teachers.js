@@ -1,5 +1,5 @@
 import { teachersDATA } from '../services/fetchURL';
-import { personCard, randomBanner } from '../components';
+import { Cards, randomBanner } from '../components';
 
 export const mainTeachers = async () => {
   const data = await teachersDATA();
@@ -9,11 +9,11 @@ export const mainTeachers = async () => {
 
 const displayTeachers = async (data) => {
   const DOMTeachers = document.querySelector('#teachers');
-  let tempStr = '';
+  let tempStr = '', card = new Cards;
   
   console.log(data)
   data.forEach(e => {
-    tempStr += personCard('teachers', e.id, e.thumbnail);
+    tempStr += card.personCard('teachers', e.id, e.thumbnail);
   });
   DOMTeachers.innerHTML = tempStr;
 }

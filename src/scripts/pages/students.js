@@ -1,6 +1,6 @@
 import { studentsDATA } from '../services/fetchURL';
 import { removeDoublesInArray } from '../services/functions';
-import { personCard, randomBanner } from '../components';
+import { Cards, randomBanner } from '../components';
 
 export const mainStudents = async () => {
   const data = await studentsDATA();
@@ -11,11 +11,11 @@ export const mainStudents = async () => {
 
 const displayStudents = async (data) => {
   const DOMStudents = document.querySelector('#students');
-  let tempStr = '';
+  let tempStr = '', card = new Cards;
   
   console.log(data)
   data.forEach(e => {
-    tempStr += personCard('students', e.id, e.fields.img[0].thumbnails.large.url);
+    tempStr += card.personCard('students', e.id, e.fields.img[0].thumbnails.large.url);
   });
   DOMStudents.innerHTML = tempStr;
 }

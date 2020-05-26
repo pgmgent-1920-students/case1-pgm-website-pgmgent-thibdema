@@ -11,7 +11,7 @@ import { makeSiteUnique } from "./services/unique";
 
 
 // Import specific functions for each page
-import { mainHome, mainBlog, mainBlogDetail, mainStudentDetail, mainWieZijnWe, mainStudents, mainTeachers, mainTeacherDetail, mainWerkplekLeren } from './pages';
+import { FunctionRouter } from './pages';
 
 // Import components
 import { displaySocialMedia } from './components';
@@ -26,6 +26,7 @@ nunjucks.configure('templates', {autoescape: true});
 let router = new Navigo(document.location.origin, true, '#!');
 router.updatePageLinks();
 
+const page = new FunctionRouter;
 
 let template = '';
 // Navigo routering pages
@@ -33,7 +34,7 @@ router.on({
   '/': () => {
     template = nunjucks.render('home.html',{});
     appContent.innerHTML = template;
-    mainHome();
+    page.HOME();
   },
   '/opleidingsinfo': () => {
     template = nunjucks.render('opleidingsinfo.html',{});
@@ -42,42 +43,42 @@ router.on({
   '/blog': () => {
     template = nunjucks.render('blog.html',{});
     appContent.innerHTML = template;
-    mainBlog();
+    page.BLOG();
   },
   '/blog/detail/:id': (params) => {
     template = nunjucks.render('blogdetail.html',{});
     appContent.innerHTML = template;
-    mainBlogDetail(params);
+    page.BLOGDETAIL(params);
   },
   '/students': () => {
     template = nunjucks.render('students.html',{});
     appContent.innerHTML = template;
-    mainStudents();
+    page.STUDENTS();
   },
   '/students/detail/:id': (params) => {
     template = nunjucks.render('studentdetail.html',{});
     appContent.innerHTML = template;
-    mainStudentDetail(params);
+    page.STUDENTDETAIL(params);
   },
   '/teachers': () => {
     template = nunjucks.render('teachers.html',{});
     appContent.innerHTML = template;
-    mainTeachers();
+    page.TEACHERS();
   },
   '/teachers/detail/:id': (params) => {
     template = nunjucks.render('teacherdetail.html',{});
     appContent.innerHTML = template;
-    mainTeacherDetail(params);
+    page.TEACHERDETAIL(params);
   },
   '/wiezijnwe': () => {
     template = nunjucks.render('wiezijnwe.html',{});
     appContent.innerHTML = template;
-    mainWieZijnWe();
+    page.WIEZIJNWE();
   },
   '/werkplekleren': () => {
     template = nunjucks.render('werkplekleren.html',{});
     appContent.innerHTML = template;
-    mainWerkplekLeren();
+    page.WERKPLEKLEREN();
   },
   '/contact': () => {
     template = nunjucks.render('contact.html',{});

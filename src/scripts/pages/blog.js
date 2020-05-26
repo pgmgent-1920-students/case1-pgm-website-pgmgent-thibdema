@@ -1,6 +1,6 @@
 import { blogPostsDATA } from '../services/fetchURL';
 import { sortBlogPosts } from '../services/sortArray';
-import { bigCard, randomBanner } from '../components';
+import { Cards, randomBanner } from '../components';
 
 export const mainBlog = async () => {
   randomBanner();
@@ -9,11 +9,11 @@ export const mainBlog = async () => {
 
 const displayBlogPosts = async () => {
   const DOMBlog = document.querySelector('#BlogPosts');
-  let data = await blogPostsDATA();
+  let data = await blogPostsDATA(), card = new Cards;
   let tempStr = '';
   const sortedData = sortBlogPosts(data);
   sortedData.forEach((e) => {
-    tempStr += bigCard('blog', e);
+    tempStr += card.bigCard('blog', e);
   });
   DOMBlog.innerHTML = tempStr;
 };

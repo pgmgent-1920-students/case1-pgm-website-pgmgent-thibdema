@@ -8,14 +8,44 @@ import { mainTeachers } from './teachers';
 import { mainTeacherDetail } from './teacherdetail';
 import { mainWerkplekLeren } from './werkplekleren';
 
+class FunctionRouter {
+  HOME() {
+    mainHome();
+  }
+
+  BLOG() {
+    mainBlog();
+  }
+
+  BLOGDETAIL(params) {
+    mainBlogDetail(params);
+  }
+
+  STUDENTS() {
+    mainStudents();
+  }
+
+  STUDENTDETAIL(params) {
+    mainStudentDetail(params);
+  }
+
+  TEACHERS() {
+    mainTeachers();
+  }
+
+  TEACHERDETAIL(params) {
+    mainTeacherDetail(params);
+  }
+
+  WIEZIJNWE() {
+    mainWieZijnWe();
+  }
+
+  WERKPLEKLEREN() {
+    mainWerkplekLeren();
+  }
+}
+
 export {
-  mainBlog,
-  mainHome,
-  mainBlogDetail,
-  mainStudentDetail,
-  mainWieZijnWe,
-  mainStudents,
-  mainTeachers,
-  mainTeacherDetail,
-  mainWerkplekLeren,
+  FunctionRouter
 }
