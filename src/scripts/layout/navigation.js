@@ -1,5 +1,5 @@
 import { navigationDATA } from '../services/fetchURL';
-import { closeMenu } from '../components/hamburgermenu';
+import { closeMenu } from './hamburgermenu';
 
 export const activeNavigation = (href) => {
   const navItems = document.querySelectorAll('header nav ul li a');

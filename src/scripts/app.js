@@ -14,7 +14,10 @@ import { makeSiteUnique } from "./services/unique";
 import { mainHome, mainBlog, mainBlogDetail, mainStudentDetail, mainWieZijnWe, mainStudents, mainTeachers, mainTeacherDetail, mainWerkplekLeren } from './pages';
 
 // Import components
-import {toggleMenu, displaySocialMedia, mainNavigation, activeNavigation } from './components';
+import { displaySocialMedia } from './components';
+
+// Import layout
+import {toggleMenu, mainNavigation, activeNavigation, footer } from './layout';
 
 // Configuration nunjucks
 nunjucks.configure('templates', {autoescape: true});
@@ -90,6 +93,7 @@ const app =  {
     makeSiteUnique.main();
     mainNavigation();
     activeNavigation();
+    footer();
   },
 };
 

@@ -19,3 +19,10 @@ export const removeDoublesInArray = (array) => {
   array.filter((item, index) => array.indexOf(item) === index);
   return array.reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], []);
 }
+
+// Scroll to top of the page
+export const scrollToTop = (e) => {
+  e.addEventListener('click', (e) => {
+    window.scrollTo(0, 0);
+  });
+}
