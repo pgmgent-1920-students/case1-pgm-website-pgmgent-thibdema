@@ -43,6 +43,7 @@ $red: #ed0034;
 
     .medium {
         height: 3rem;
+        font-size: 1.2rem;
     }
 
     .large {
@@ -120,6 +121,83 @@ $red: #ed0034;
         top: 3px;
         left: 3px;
     }
-
 }
 
+@media only screen and (max-width: 1360px) {
+    .curriculum {
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    .curriculum {
+        .small {
+            font-size: 0.9rem;
+            .curriculum__item__period {
+                font-size: 0.8rem;
+            }
+        }
+    
+        .medium {
+            font-size: 1rem;
+        }
+
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .curriculum {
+        .small {
+            font-size: 0.8rem;
+            .curriculum__item__period {
+                font-size: 0.6rem;
+            }
+        }
+    
+        .medium {
+            font-size: 0.9rem;
+        }
+
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .curriculum {
+        .small {
+            font-size: 0.7rem;
+            .curriculum__item__period {
+                font-size: 0.5rem;
+            }
+        }
+    
+        .medium {
+            font-size: 0.8rem;
+        }
+
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.3rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+}
