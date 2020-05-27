@@ -1,9 +1,11 @@
 import { werkpleklerenDATA } from '../services/fetchURL';
+import { randomBanner } from '../components/randomBanner';
 
 
 export const mainWerkplekLeren = async () => {
   const data = await werkpleklerenDATA();
   showRows(data);
+  randomBanner();
 }
 
 const showRows = (data) => {
