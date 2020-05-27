@@ -32,7 +32,7 @@ class Footer {
     const DOMWiezijnweList = document.querySelector('#footer_nav_wiezijnwe');
     let tempStr = '';
     const data = await bannersDATA();
-    data.map((e) => (e.wiezijnwe) ? tempStr += `<li><a href="/${e.href}" data-navigo>${e.category}</a></li>` : '');
+    data.map((e) => (e.wiezijnwe) ? tempStr += `<li><a href="#!/${e.href}" data-navigo>${e.category}</a></li>` : '');
     DOMWiezijnweList.innerHTML = tempStr;
   }
   
