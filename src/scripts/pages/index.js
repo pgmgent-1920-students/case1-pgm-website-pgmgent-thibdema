@@ -7,10 +7,15 @@ import { mainStudents } from './students';
 import { mainTeachers } from './teachers';
 import { mainTeacherDetail } from './teacherdetail';
 import { mainWerkplekLeren } from './werkplekleren';
+import { mainCurriculum } from './curriculum';
 
 class FunctionRouter {
   HOME() {
     mainHome();
+  }
+
+  CURRICULUM() {
+    mainCurriculum();
   }
 
   BLOG() {
@@ -43,6 +48,10 @@ class FunctionRouter {
 
   WERKPLEKLEREN() {
     mainWerkplekLeren();
+  }
+
+  ERROR404() {
+    
   }
 }
 

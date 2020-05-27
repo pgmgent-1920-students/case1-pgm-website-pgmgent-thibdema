@@ -40,6 +40,11 @@ router.on({
     template = nunjucks.render('opleidingsinfo.html',{});
     appContent.innerHTML = template;
   },
+  '/curriculum': () => {
+    template = nunjucks.render('curriculum.html',{});
+    appContent.innerHTML = template;
+    page.CURRICULUM();
+  },
   '/blog': () => {
     template = nunjucks.render('blog.html',{});
     appContent.innerHTML = template;
@@ -85,6 +90,12 @@ router.on({
     appContent.innerHTML = template;
   },
 }).resolve();
+
+router.notFound(() => {
+  template = nunjucks.render('404.html',{});
+  appContent.innerHTML = template;
+  page.ERROR404();
+});
 
 // Main data that is needed on all the pages of the app
 const app =  {
