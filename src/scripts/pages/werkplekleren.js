@@ -30,7 +30,7 @@ const row = (direction,data) => {
         <p class="context">
             ${data.text}
         </p>
-        <a href="${data.href}">
+        <a href="${data.href}" target="_blank" rel="noopener noreferrer">
             <button class="btn-1">
                 ${data.button_text}
             </button>
