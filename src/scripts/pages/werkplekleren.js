@@ -30,10 +30,10 @@ const row = (direction,data) => {
         <p class="context">
             ${data.text}
         </p>
-        <a href="${data.href}" target="_blank" rel="noopener noreferrer">
-            <button class="btn-1">
-                ${data.button_text}
-            </button>
+        ${(data.href.includes('#!')) ? `<a href="${data.href}" data-navigo>` :`<a href="${data.href}" target="_blank" rel="noopener noreferrer">`}
+          <button class="btn-1">
+              ${data.button_text}
+          </button>
         </a>
     </article>
   </section>
