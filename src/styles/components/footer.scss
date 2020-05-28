@@ -9,13 +9,12 @@ footer {
         }
     }
     & nav {
-        margin: 3rem 0rem;
+        margin: 3rem auto;
         display: flex;
-        justify-content: space-between;
-        text-align: right;
+        justify-content: space-around;
+        text-align: left;
         text-transform: capitalize;
         & article {
-            width: 25%;
             & li {
                 margin: 0.3rem 0rem;
             }
@@ -75,11 +74,10 @@ footer {
     footer {
         & nav {
             margin: 0 auto;
-            width: 75%;
+            width: 60%;
             flex-wrap: wrap;
             & article {
-                padding-right: 3rem;
-                width: 50%;
+                padding-right: 2rem;
                 margin-bottom: 2rem;
             }
         }
@@ -99,18 +97,18 @@ footer {
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 650px) {
     footer {
         & nav {
+            width: 65%;
             & article {
-                width: 50%;
-                padding-right: 0rem;
+                padding-right: 1rem;
             }
         }
     }
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 500px) {
     footer {
         & nav {
             & article {

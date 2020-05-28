@@ -88,6 +88,7 @@ router.on({
   '/contact': () => {
     template = nunjucks.render('contact.html',{});
     appContent.innerHTML = template;
+    page.CONTACT();
   },
 }).resolve();
 

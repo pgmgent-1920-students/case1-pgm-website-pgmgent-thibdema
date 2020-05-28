@@ -45,6 +45,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "mapbox-gl": "^1.10.1",
     "navigo": "^7.1.2",
     "nunjucks": "^3.2.1"
   }

@@ -8,6 +8,7 @@ import { mainTeachers } from './teachers';
 import { mainTeacherDetail } from './teacherdetail';
 import { mainWerkplekLeren } from './werkplekleren';
 import { mainCurriculum } from './curriculum';
+import { mainContact } from './contact';
 
 class FunctionRouter {
   HOME() {
@@ -48,6 +49,10 @@ class FunctionRouter {
 
   WERKPLEKLEREN() {
     mainWerkplekLeren();
+  }
+
+  CONTACT() {
+    mainContact();
   }
 
   ERROR404() {
