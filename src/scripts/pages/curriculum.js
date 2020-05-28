@@ -68,22 +68,24 @@ const loopRows = (category, data) => {
         let exists = e.more.find((zoek) => zoek.periode == currentPeriod && zoek.year == year);
         if(exists) {
           tussen = `
-          <div class="curriculum__item__large flip-card">
-            <div class="flip-card-inner">
-              <div class="vakContent flip-card-front">
-                <div class="icon">${e.icon}</div>
-                <div class="studiepunten">${exists.studiepunten} sp</div>
-                ${e.name} ${(exists.part) ? exists.part : ''}
-                <div class="uren">${exists.uur} u/w</div>
-              </div>
-              <div class="hoverVak flip-card-back">
-                <div class="icon">${e.icon}</div>
-                <div class="studiepunten">${exists.studiepunten} sp</div>
-                ${exists.specific}
-                <div class="uren">${exists.uur} u/w</div>
-              </div>
-            </div>
-          </div>`;
+            <div class="curriculum__item__large ">
+              <a class="flip-card" href="/vakken/detail/${e.name}/${exists.year}/${exists.periode}" data-navigo>
+                <div class="flip-card-inner">
+                  <div class="vakContent flip-card-front">
+                    <div class="icon">${e.icon}</div>
+                    <div class="studiepunten">${exists.studiepunten} <abbr title="studiepunten">sp</abbr></div>
+                    ${e.name} ${(exists.part) ? exists.part : ''}
+                    <div class="uren">${exists.uur} <abbr title="uren per week">u/w</abbr></div>
+                  </div>
+                  <div class="hoverVak flip-card-back">
+                    <div class="icon">${e.icon}</div>
+                    <div class="studiepunten">${exists.studiepunten} <abbr title="studiepunten">sp</abbr></div>
+                    ${exists.specific}
+                    <div class="uren">${exists.uur} <abbr title="uren per week">u/w</abbr></div>
+                  </div>
+                </div>
+              </a>
+            </div>`;
         }
       };
     });

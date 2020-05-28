@@ -9,7 +9,6 @@ import nunjucks from 'nunjucks';
 import { appContent } from "./services/config";
 import { makeSiteUnique } from "./services/unique";
 
-
 // Import specific functions for each page
 import { FunctionRouter } from './pages';
 
