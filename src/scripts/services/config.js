@@ -13,4 +13,4 @@ export const repeatArraySlider = 20;
 export const amountOfBlogPostsDisplayed = 4;
 
 // Items showen on each page || paginering
-export const itemsPerPage = 20;
+export const itemsPerPage = 5;

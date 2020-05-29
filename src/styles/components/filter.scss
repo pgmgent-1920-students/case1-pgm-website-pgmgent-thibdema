@@ -44,6 +44,20 @@
 }
 
 @media only screen and (max-width: 960px) {
+    .filter {
+        &__input {
+            margin-left: 1rem;
+            &__field {
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem 0rem;
+                select {
+                    margin: 0;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -62,6 +76,21 @@
     .filter {
         flex-direction: column;
         border-radius: 1rem;
+        &__input {
+            margin: 0rem;
+            flex-direction: column;
+            &__field {
+                margin: 0;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem 0rem;
+                select {
+                    margin: 0;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
         select, button {
             margin: 0.5rem 0rem;
         }
