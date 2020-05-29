@@ -1,7 +1,6 @@
-404 met three.js
+404 met three.js --> finetunen
 opleidingsinfo pagina
 werkplekleren forms
 cases.json
 cases pagina
-filtering studenten op jaar
-filtering docenten op vak
+nieuw programma curriculum ingeven

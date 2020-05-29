@@ -99,12 +99,15 @@ router.on({
     appContent.innerHTML = template;
     page.CONTACT();
   },
+  '/404': () => {
+    template = nunjucks.render('404.html',{});
+    appContent.innerHTML = template;
+    page.ERROR404();
+  },
 }).resolve();
 
 router.notFound(() => {
-  template = nunjucks.render('404.html',{});
-  appContent.innerHTML = template;
-  page.ERROR404();
+  router.navigate('/404');
 });
 
 // Main data that is needed on all the pages of the app

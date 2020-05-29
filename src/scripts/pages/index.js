@@ -11,6 +11,7 @@ import { mainCurriculum } from './curriculum';
 import { mainContact } from './contact';
 import { mainMentors } from './mentors';
 import { mainMentorDetail } from './mentordetail';
+import { main404 } from './404';
 
 class FunctionRouter {
   HOME() {
@@ -66,7 +67,7 @@ class FunctionRouter {
   }
 
   ERROR404() {
-    
+    main404();
   }
 }
 

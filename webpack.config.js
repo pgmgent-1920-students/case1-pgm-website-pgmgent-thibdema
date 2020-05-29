@@ -66,6 +66,13 @@ module.exports = (env, argv) => {
             name: 'videos/[name].[hash:7].[ext]',
           },
         },
+        {
+          test: /\.(glb)$/,
+          loader: 'file-loader',
+          options: {
+            name: '3d-models/[name].[hash:7].[ext]',
+          },
+        },
       ],
     },
 
@@ -91,6 +98,10 @@ module.exports = (env, argv) => {
         {
           from: './src/videos',
           to: 'videos',
+        },
+        {
+          from: './src/3d-models',
+          to: '3d-models',
         },
       ]),
       new HtmlWebpackPlugin({
