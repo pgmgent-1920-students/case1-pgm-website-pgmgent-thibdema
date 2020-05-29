@@ -1,7 +1,7 @@
 import {BAASURL} from './config';
 
 // Get data objects from url via fetch API
-export async function getDATA(url) {
+export const getDATA = async (url) => {
   const content = await fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -14,7 +14,7 @@ export async function getDATA(url) {
 }
 
 // Post data objects to url via fetch API
-export async function postDATA(url, obj) {
+export const postDATA = async (url, obj) => {
   const content = await fetch(url, {
     method: 'POST',
     headers: {

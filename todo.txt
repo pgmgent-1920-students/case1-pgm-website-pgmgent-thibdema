@@ -1,4 +1,3 @@
-404 met three.js --> finetunen
 opleidingsinfo pagina
 werkplekleren forms
 cases.json

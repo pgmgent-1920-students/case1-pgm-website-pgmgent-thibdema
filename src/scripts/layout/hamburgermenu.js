@@ -7,7 +7,7 @@ const header = document.querySelector('header');
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
 
-export function toggleMenu() {
+export const toggleMenu = () => {
   hamdiv.addEventListener("click", (ev) => {
     if(hamburgerbtn.getAttribute("class").includes("invisible")) {
       closeMenu();
@@ -23,7 +23,7 @@ export function toggleMenu() {
   });
 }
 
-export function closeMenu() {
+export const closeMenu = () => {
   hamburgerbtn.classList.remove('invisible');
   closebtn.classList.add('invisible');
   navul.classList.add('invisible');
@@ -32,7 +32,7 @@ export function closeMenu() {
   footer.style.display='block';
 }
 
-function openMenu() {
+export const openMenu = () => {
   closebtn.classList.remove('invisible');
   hamburgerbtn.classList.add('invisible');
   navul.classList.remove('invisible');

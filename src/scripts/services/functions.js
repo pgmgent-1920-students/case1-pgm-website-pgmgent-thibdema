@@ -1,16 +1,16 @@
 // Wait x milliseconds function
-export function sleep(ms) {
+export const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // Shuffling array
-export function shuffle(array) {
+export const shuffle = (array) => {
   const shuffledArray = array.sort(() => Math.random() - 0.5);
   return shuffledArray;
 }
 
 // Random number between min and max
-export function randomNumber(min, max) {
+export const randomNumber = (min, max) => {
   return Math.floor(Math.random() * max) + min;
 }
 
