@@ -3,7 +3,7 @@ import { Cards } from './cards';
 import { randomBanner } from './randomBanner';
 import { banner } from './banner';
 import { arrowUp } from './arrowUp';
-import { mapboxMap } from './mapbox.map';
+import { Paginering } from './paginering';
 
 export {
   displaySocialMedia,
@@ -11,5 +11,5 @@ export {
   randomBanner,
   banner,
   arrowUp,
-  mapboxMap,
+  Paginering,
 } 

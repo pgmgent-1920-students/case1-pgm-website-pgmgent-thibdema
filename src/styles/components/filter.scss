@@ -7,6 +7,17 @@
     justify-content: space-between;
     padding: 0.5rem 1rem;
     margin-top: 3rem;
+
+    &__input {
+        display: flex;
+        &__field {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            margin-right: 2rem;
+        }
+    }
     
     button {
         margin: 0rem;
@@ -18,9 +29,10 @@
         border: 1.5px solid var(--primary);
         border-radius: 4px;
         font-size: 1.2rem;
+        cursor: pointer;
 
         option {
-            padding: 0.5rem;
+            cursor: pointer;
         }
     }
 }
@@ -35,10 +47,31 @@
 }
 
 @media only screen and (max-width: 720px) {
+    .filter {
+        select {
+            font-size: 1rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+    }
 }
 
 @media only screen and (max-width: 540px) {
+    .filter {
+        flex-direction: column;
+        border-radius: 1rem;
+        select, button {
+            margin: 0.5rem 0rem;
+        }
+    }
 }
 
 @media only screen and (max-width: 390px) {
+    .filter {
+        select, button {
+            font-size: 0.75rem;
+        }
+    }
 }

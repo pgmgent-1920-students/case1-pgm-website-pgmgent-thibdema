@@ -22,5 +22,9 @@
             background-color: var(--primary);
             color: var(--white);
         }
+
+        &.onlyPage {
+            border-radius: 4px;
+        }
     }
 }
