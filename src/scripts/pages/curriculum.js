@@ -1,12 +1,14 @@
-import { coursesDATA } from '../services/fetchURL';
+import { coursesDATA, technologiesDATA } from '../services/fetchURL';
 import { removeDoublesInArray } from '../services/functions';
 import { randomBanner } from '../components';
 
 export const mainCurriculum = async () => {
   const data = await coursesDATA();
+  const technologies = await technologiesDATA();
   displayHeading();
-  fillContent(data);
   randomBanner();
+  await fillContent(data);
+  await popupWindow(data, technologies);
 }
 
 const heading = [
@@ -69,7 +71,7 @@ const loopRows = (category, data) => {
         if(exists) {
           tussen = `
             <div class="curriculum__item__large ">
-              <a class="flip-card" href="/vakken/detail/${e.name}/${exists.year}/${exists.periode}" data-navigo>
+              <div class="flip-card" id="vak" vak="${e.name}" vakID="${exists.id}">
                 <div class="flip-card-inner">
                   <div class="vakContent flip-card-front">
                     <div class="icon">${e.icon}</div>
@@ -84,7 +86,7 @@ const loopRows = (category, data) => {
                     <div class="uren">${exists.uur} <abbr title="uren per week">u/w</abbr></div>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>`;
         }
       };
@@ -95,5 +97,73 @@ const loopRows = (category, data) => {
     tempStr += tussen;
   }
   tempStr += '</div>';
+  return tempStr;
+}
+
+const popupWindow = (data, technologies) => {
+  const DOMPopup = document.querySelector('#popup');
+  const DOMClose = document.querySelector('#close');
+  const vakken = document.querySelectorAll('#vak');
+  closePopup(DOMClose, DOMPopup);
+  closePopup(DOMPopup, DOMPopup);
+  vakken.forEach((vak) => {
+    vak.addEventListener('click', (e) => {
+      openPopup(DOMPopup);
+      displaySpecificData(vak, data, technologies);
+    });
+  });
+}
+
+const openPopup = (DOM) => {
+  DOM.classList.add('open');
+};
+
+const closePopup = (DOMClose, DOMPopup) => {
+  DOMClose.addEventListener('click', (e) => DOMPopup.classList.remove('open'));
+};
+
+const displaySpecificData = async (ChosenCourse, data, technologies) => {
+  const DOMContent = document.querySelector('#popup__window__content');
+  const vak = ChosenCourse.getAttribute('vak');
+  const vakid = ChosenCourse.getAttribute('vakid');
+  const vakDATA = data.find((v) => v.name == vak);
+  const specifiekeDATA = vakDATA.more.find((v) => v.id == vakid);
+
+  DOMContent.innerHTML = `
+    <h1 class="popup__window__content__title">${vakDATA.name}${(specifiekeDATA.specific) ? `: ${specifiekeDATA.specific}` : `` }</h1>
+    <h3 class="popup__window__content__subtitle"></h3>
+    <div class="row">
+      <div>
+        <h4>Technologies</h4>
+        <ul class="popup__window__content__technologies">
+          ${listTechnologies(specifiekeDATA, technologies)}
+        </ul>
+      </div>
+      <div>
+        <h4>Info</h4>
+        <div class="popup__window__content__info">
+          <p><b>${specifiekeDATA.studiepunten}</b> studiepunten</p>
+          <p><b>${specifiekeDATA.uur}</b> uren les per week</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+const listTechnologies = (specDATA, technologies) => {
+  let tempStr = '';
+
+  specDATA.technologies.forEach((technology) => {
+    let currentTECH = technologies.find((e) => e.id == technology-1);
+    tempStr += `
+    <li class="technology">
+      <div class="technology__icon">
+        ${currentTECH.icon}
+      </div>
+      <div class="technology__name">
+        ${currentTECH.name}
+      </div>
+    </li>`
+  });
   return tempStr;
 }

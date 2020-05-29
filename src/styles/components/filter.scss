@@ -6,9 +6,22 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    margin-top: 3rem;
     
     button {
         margin: 0rem;
+    }
+
+    select {
+        padding: 0.5rem;
+        margin-left: 1rem;
+        border: 1.5px solid var(--primary);
+        border-radius: 4px;
+        font-size: 1.2rem;
+
+        option {
+            padding: 0.5rem;
+        }
     }
 }
 

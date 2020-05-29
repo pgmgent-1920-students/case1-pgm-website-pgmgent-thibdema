@@ -1,0 +1,26 @@
+#pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .page {
+        background-color: var(--white-green);
+        border: 1px solid var(--primary);
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+        &:first-child {
+            border-radius: 4px 0px 0px 4px;
+        }
+
+        &:last-child {
+            border-radius: 0px 4px 4px 0px;
+        }
+
+        &.activePage {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+    }
+}

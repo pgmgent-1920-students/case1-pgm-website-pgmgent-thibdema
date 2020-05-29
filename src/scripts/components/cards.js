@@ -25,7 +25,7 @@ export class Cards {
 
   personCard (category, id, img) {
     return `
-    <li class="personCard">
+    <li class="personCard" data-id="${id}">
       <a href="#!/${category}/detail/${id}" class="personCard__mobile__link" data-navigo>
         <div class="outer-div">
           <div class="personCard__thumbnail inner-div" style="background-image: url(${img})"></div>

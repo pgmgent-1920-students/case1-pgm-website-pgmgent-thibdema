@@ -54,6 +54,16 @@ router.on({
     appContent.innerHTML = template;
     page.BLOGDETAIL(params);
   },
+  '/mentors': () => {
+    template = nunjucks.render('mentors.html',{});
+    appContent.innerHTML = template;
+    page.MENTORS();
+  },
+  '/mentors/detail/:id': (params) => {
+    template = nunjucks.render('mentordetail.html',{});
+    appContent.innerHTML = template;
+    page.MENTORDETAIL(params);
+  },
   '/students': () => {
     template = nunjucks.render('students.html',{});
     appContent.innerHTML = template;

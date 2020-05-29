@@ -9,6 +9,8 @@ import { mainTeacherDetail } from './teacherdetail';
 import { mainWerkplekLeren } from './werkplekleren';
 import { mainCurriculum } from './curriculum';
 import { mainContact } from './contact';
+import { mainMentors } from './mentors';
+import { mainMentorDetail } from './mentordetail';
 
 class FunctionRouter {
   HOME() {
@@ -25,6 +27,14 @@ class FunctionRouter {
 
   BLOGDETAIL(params) {
     mainBlogDetail(params);
+  }
+
+  MENTORS() {
+    mainMentors();
+  }
+
+  MENTORDETAIL(params) {
+    mainMentorDetail(params);
   }
 
   STUDENTS() {

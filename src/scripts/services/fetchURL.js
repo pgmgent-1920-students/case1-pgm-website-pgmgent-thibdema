@@ -62,8 +62,18 @@ export const werkpleklerenDATA = async () => {
   return addID(data);
 };
 
+export const technologiesDATA = async () => {
+  const data = await getDATA(`${BAASURL}technologies.json`);
+  return addID(data);
+};
+
 export const bannersDATA = async () => {
   return await getDATA(`${BAASURL}banners.json`);
+};
+
+export const mentorsDATA = async () => {
+  const data = await getDATA(`${BAASURL}mentors.json`);
+  return addID(data);
 };
 
 const addID = (arr) => {
