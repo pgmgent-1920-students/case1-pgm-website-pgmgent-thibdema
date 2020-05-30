@@ -2,6 +2,3 @@ opleidingsinfo pagina
 werkplekleren forms
 cases.json
 cases pagina
-nieuw programma curriculum ingeven
-
-courses.json data management vak --> technologieen aanpassen

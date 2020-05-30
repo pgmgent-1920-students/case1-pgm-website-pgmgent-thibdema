@@ -62,14 +62,14 @@ $bg-color: rgba(48, 43, 68, 0.6);
             font-size: 3rem;
             color: var(--white);
             line-height: 0;
-            background-color: var(--secondary);
+            background-color: #e74c3c;
             border-radius: 0.25rem;
             padding: 1.5rem 0.75rem;
             cursor: pointer;
 
             &:hover {
                 transition: 0.3s;
-                filter: brightness(90%);
+                filter: brightness(110%);
 
             }
         }
