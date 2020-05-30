@@ -1,12 +1,13 @@
 import { itemsPerPage } from '../services/config';
 
 export class Paginering {
-  async mainPaginering() {
-    const allItems = document.querySelectorAll('.personCard');
+  async mainPaginering(typeCard) {
+    const typeCardID = `.${typeCard}`;
+    const allItems = document.querySelectorAll(typeCardID);
     const DOMPages = document.querySelector('#pages');
     await this.loadPages(DOMPages, allItems);
-    await this.addListeners();
-    await this.changePage();
+    await this.addListeners(typeCardID);
+    await this.changePage(typeCardID);
   }
 
   loadPages(DOM, allItems) {
@@ -22,27 +23,27 @@ export class Paginering {
     DOM.innerHTML = tempStr;
   }
 
-  addListeners() {
+  addListeners(typeCardID) {
     const pages = document.querySelectorAll('.page');
     pages.forEach((page) => {
       page.addEventListener('click', (e) => {
-        this.changeActivePage(page);
+        this.changeActivePage(page, typeCardID);
       });
     });
   }
 
-  changeActivePage(newActivePage) {
+  changeActivePage(newActivePage, typeCardID) {
     const currentActivePage = document.querySelector('.activePage');
     currentActivePage.classList.remove('activePage');
     newActivePage.classList.add('activePage');
-    this.changePage();
+    this.changePage(typeCardID);
   }
 
-  changePage() {
+  changePage(typeCardID) {
     const pagenumber = document.querySelector('.activePage').innerHTML;
     const maxID = pagenumber * itemsPerPage;
     const minID = maxID - itemsPerPage;
-    const persons = document.querySelectorAll('.personCard');
+    const persons = document.querySelectorAll(typeCardID);
     persons.forEach((person, index) => (minID <= index && maxID > index) ? person.style.display='block': person.style.display='none');
   }
   

@@ -1,11 +1,14 @@
 import { mentorsDATA } from '../services/fetchURL';
 import { removeDoublesInArray } from '../services/functions';
-import { Cards, randomBanner } from '../components';
+import { Cards, randomBanner, Paginering } from '../components';
 
 export const mainMentors = async () => {
   const data = await mentorsDATA();
   displayStudents(data);
   randomBanner();
+  
+  const newPaginering = new Paginering;
+  newPaginering.mainPaginering('personCard');
 };
 
 const displayStudents = async (data) => {

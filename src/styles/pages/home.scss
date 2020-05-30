@@ -1,4 +1,7 @@
 .home {
+    input:focus {
+        all: unset;
+    }
     & .intro {
         padding: 4rem 0rem;
         & article {
@@ -103,20 +106,25 @@
             justify-content: center;
             max-width: 50%;
             margin: 0 auto;
-            &__input {
-                transition: 0.3s;
-                padding: 1rem 1rem;
-                border: 2px solid var(--grey);
-                margin-right: 1rem;
-                width: 100%;
-                font-size: 1.3rem;
-                background-color: var(--white);
 
+            input {
+                background-color: var(--white);
+                width: 100%;
+                padding: 1rem;
+                margin-right: 1rem;
+                font-size: 1.2rem;
+                border: 2px solid var(--primary-light);
+                box-sizing: border-box;
+                -webkit-transition: 0.3s;
+                transition: 0.3s;
+                outline: none;
                 &:focus {
                     transition: 0.3s;
-                    border: 2px solid var(--primary)
+                    border: 2px solid var(--primary);
+                    background-color: var(--white);
                 }
             }
+
             &__submit {
 
             }
@@ -142,8 +150,8 @@
 
         & .subscribe-now {    
             &__form {
-                &__input {
-                    padding: 1rem 1rem;
+                input {
+                    padding: 1rem;
                     font-size: 1rem;
                 }
             }
@@ -176,7 +184,7 @@
         }
         & .subscribe-now {    
             &__form {
-                &__input {
+                input {
                     padding: 0.8rem 1rem;
                     font-size: 0.9rem;
                 }
@@ -210,7 +218,7 @@
         & .subscribe-now {    
             &__form {
                 max-width: 80%;
-                &__input {
+                input {
                     padding: 0.8rem 1rem;
                     margin-right: 0.5rem;
                     font-size: 0.8rem;

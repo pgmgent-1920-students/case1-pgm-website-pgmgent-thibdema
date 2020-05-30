@@ -12,7 +12,7 @@ export const mainTeachers = async () => {
   displayTeachers(data);
   randomBanner();
   await filter.mainFilter(data);
-  await paginering.mainPaginering();
+  await paginering.mainPaginering('personCard');
 };
 
 const displayTeachers = (data) => {
@@ -49,7 +49,7 @@ class Filtering {
       let vak = formData.get('vakken'); // get parameter moet value zijn van het name attribuut in je form
       this.filterTeachers(vak, data);
       const newPaginering = new Paginering;
-      newPaginering.mainPaginering();
+      newPaginering.mainPaginering('personCard');
     });
   }
 

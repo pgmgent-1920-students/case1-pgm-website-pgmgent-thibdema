@@ -3,6 +3,16 @@ import { sortBlogPosts } from '../services/sortArray';
 import { Cards, randomBanner } from '../components';
 import { amountOfBlogPostsDisplayed, repeatArraySlider } from '../services/config';
 
+
+export const mainHome = async () => {
+  const init = new Home;
+  init.sliderCourses();
+  init.lastBlogPosts();
+  init.ourStudents();
+  randomBanner();
+  formProcessing();
+};
+
 class Home {
   constructor() {
     this.DOMSliderVakken = document.querySelector('#slider-courses');
@@ -56,10 +66,19 @@ class Home {
   }
 }
 
-export const mainHome = async () => {
-  const init = new Home;
-  init.sliderCourses();
-  init.lastBlogPosts();
-  init.ourStudents();
-  randomBanner();
-};
+const formProcessing = () => {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let formData = new FormData;
+
+    const email = formData.get('email');
+
+    const urlToAddSubscriber = "pgm.gent/addSubscriber.php";
+
+    const subscribeObject = {
+      subscriber: email,
+    };
+    postDATA(urlToAddSubscriber, subscribeObject);
+  });
+}

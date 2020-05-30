@@ -1,10 +1,13 @@
 import { blogPostsDATA } from '../services/fetchURL';
 import { sortBlogPosts } from '../services/sortArray';
-import { Cards, randomBanner } from '../components';
+import { Cards, randomBanner,Paginering } from '../components';
 
 export const mainBlog = async () => {
-  randomBanner();
-  displayBlogPosts();
+  await displayBlogPosts();
+  await randomBanner();
+
+  const newPaginering = new Paginering;
+  newPaginering.mainPaginering('bigCard');
 };
 
 const displayBlogPosts = async () => {

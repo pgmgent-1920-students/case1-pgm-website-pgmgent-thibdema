@@ -12,7 +12,7 @@ export const mainStudents = async () => {
   randomBanner();
   
   await filter.mainFilter(data);
-  await paginering.mainPaginering();
+  await paginering.mainPaginering('personCard');
 };
 
 const displayStudents = async (data) => {
@@ -60,7 +60,7 @@ class Filtering {
       let generation = formData.get('generation');
       this.filterStudents(favovak, generation, data);
       const newPaginering = new Paginering;
-      newPaginering.mainPaginering();
+      newPaginering.mainPaginering('personCard');
     });
   }
 

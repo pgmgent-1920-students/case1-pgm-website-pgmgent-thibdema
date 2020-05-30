@@ -1,8 +1,6 @@
-$bg-color: rgba(48, 43, 68, 0.6);
-
 .popup {
     transition: 0.3s;
-    background: $bg-color;
+    background: var(--primary-light);
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -17,7 +15,7 @@ $bg-color: rgba(48, 43, 68, 0.6);
 
     &__window {
         background-color: var(--white);
-        border: 1px solid $bg-color;
+        border: 1px solid var(--primary-light);
         width: 70%;
         border-radius: 0.5rem;
         z-index: 50;
