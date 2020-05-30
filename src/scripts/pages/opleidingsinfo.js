@@ -1,6 +1,6 @@
 import { technologiesDATA } from '../services/fetchURL';
 import { randomNumber } from '../services/functions';
-import { amountOfTechnologiesDisplayed } from '../services/config';
+import { displayedAmountsOnPages } from '../services/config';
 
 export const mainOpleidingsinfo = async () => {
   const technologyData = await technologiesDATA();
@@ -35,7 +35,7 @@ class RandomTechnologies {
 
   getRandomNumbers(maxSize) {
     let newArr = [];
-    while(newArr.length < amountOfTechnologiesDisplayed+1) {
+    while(newArr.length < displayedAmountsOnPages.opleidingsinfo_technologies) {
       let number = randomNumber(0, maxSize);
       (!newArr.includes(number)) ? newArr.push(number) : '' ;
     }

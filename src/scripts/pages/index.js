@@ -13,6 +13,9 @@ import { mainMentors } from './mentors';
 import { mainMentorDetail } from './mentordetail';
 import { main404 } from './404';
 import { mainOpleidingsinfo } from './opleidingsinfo';
+import { mainCases } from './cases';
+import { mainCaseDetail } from './casedetail';
+
 
 class FunctionRouter {
   HOME() {
@@ -21,6 +24,14 @@ class FunctionRouter {
 
   OPLEIDINGSINFO() {
     mainOpleidingsinfo();
+  }
+
+  CASES() {
+    mainCases();
+  }
+
+  CASEDETAIL(params) {
+    mainCaseDetail(params);
   }
 
   CURRICULUM() {

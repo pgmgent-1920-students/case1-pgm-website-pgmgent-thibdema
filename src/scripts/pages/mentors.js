@@ -1,6 +1,6 @@
 import { mentorsDATA } from '../services/fetchURL';
-import { removeDoublesInArray } from '../services/functions';
 import { Cards, randomBanner, Paginering } from '../components';
+import { displayedAmountsOnPages } from '../services/config';
 
 export const mainMentors = async () => {
   const data = await mentorsDATA();
@@ -8,7 +8,7 @@ export const mainMentors = async () => {
   randomBanner();
   
   const newPaginering = new Paginering;
-  newPaginering.mainPaginering('personCard');
+  newPaginering.mainPaginering('personCard', displayedAmountsOnPages.mentors);
 };
 
 const displayStudents = async (data) => {

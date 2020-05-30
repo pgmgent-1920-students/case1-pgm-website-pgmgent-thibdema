@@ -1,6 +1,7 @@
 import { coursesDATA, technologiesDATA } from '../services/fetchURL';
 import { removeDoublesInArray } from '../services/functions';
 import { randomBanner } from '../components';
+import { educationDuration } from '../services/config';
 
 export const mainCurriculum = async () => {
   const data = await coursesDATA();
@@ -11,26 +12,8 @@ export const mainCurriculum = async () => {
   await popupWindow(data, technologies);
 }
 
-const heading = [
-  {
-    name: "Jaar",
-    amount: "2",
-    DOM: "year"
-  },
-  {
-    name: "Semester",
-    amount: "4",
-    DOM: "semester"
-  },
-  {
-    name: "Periode",
-    amount: "8",
-    DOM: "period"
-  }
-];
-
 const displayHeading = () => {
-  heading.map((e) => {
+  educationDuration.map((e) => {
     let DOMELEMENT = document.querySelector(`#${e.DOM}`);
     let tempStr = '';
     for (let i = 0; i < e.amount; i++) {
@@ -55,7 +38,7 @@ const fillContent = (data) => {
 
 const loopRows = (category, data) => {
   let tempStr = `<div class="curriculum__row large ${category}">`, year = 1, currentPeriod = 1;
-  for (let period = 0; period < heading[2].amount; period += 2) {
+  for (let period = 0; period < educationDuration[2].amount; period += 2) {
     if (period > 3) {
       year = 2;
       currentPeriod = period - 3;

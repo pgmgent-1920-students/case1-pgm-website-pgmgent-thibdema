@@ -15,10 +15,18 @@ export class Cards {
     `;
   }
 
-  smallCard (category, data) {
+  smallCard (category, id, title, vak, thumbnail) {
     return `
     <li class="smallCard">
-      
+      <a href="#!/${category}/detail/${id}" data-navigo>
+        <div class="outer-div smallCard__thumbnail">
+          <div class="smallCard__thumbnail__img inner-div" style="background-image: url(${thumbnail})"></div>
+          <div class="smallCard__thumbnail__vak">${vak}</div>
+        </div>
+        <div class="smallCard__text">
+          <p class="smallCard__title">${title}</p>
+        </div>
+      </a>
     </li>
     `;
   }

@@ -1,6 +1,7 @@
 import { teachersDATA } from '../services/fetchURL';
 import { Cards, randomBanner, Paginering } from '../components';
 import { removeDoublesInArray } from '../services/functions';
+import { displayedAmountsOnPages } from '../services/config';
 
 
 export const mainTeachers = async () => {
@@ -12,7 +13,7 @@ export const mainTeachers = async () => {
   displayTeachers(data);
   randomBanner();
   await filter.mainFilter(data);
-  await paginering.mainPaginering('personCard');
+  await paginering.mainPaginering('personCard', displayedAmountsOnPages.teachers);
 };
 
 const displayTeachers = (data) => {
@@ -49,7 +50,7 @@ class Filtering {
       let vak = formData.get('vakken'); // get parameter moet value zijn van het name attribuut in je form
       this.filterTeachers(vak, data);
       const newPaginering = new Paginering;
-      newPaginering.mainPaginering('personCard');
+      newPaginering.mainPaginering('personCard', displayedAmountsOnPages.teachers);
     });
   }
 

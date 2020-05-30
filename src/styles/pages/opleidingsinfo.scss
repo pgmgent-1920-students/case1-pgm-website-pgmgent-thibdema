@@ -27,3 +27,70 @@
         }
     }
 }
+
+@media only screen and (max-width: 1360px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .opleidingsinfo {
+        .technologies {
+            h3 {
+                font-size: 1rem;
+                margin-bottom: 0rem;
+            }
+
+            &__content {
+                width: 80%;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                &__item {
+                    width: 26%;
+                    text-align: center;
+                    margin-bottom: 1rem;
+
+                    img {
+                        width: 70%;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+}

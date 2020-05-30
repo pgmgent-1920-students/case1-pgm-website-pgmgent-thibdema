@@ -65,6 +65,16 @@ router.on({
     appContent.innerHTML = template;
     page.MENTORDETAIL(params);
   },
+  '/cases': () => {
+    template = nunjucks.render('cases.html',{});
+    appContent.innerHTML = template;
+    page.CASES();
+  },
+  '/cases/detail/:id': (params) => {
+    template = nunjucks.render('casedetail.html',{});
+    appContent.innerHTML = template;
+    page.CASEDETAIL(params);
+  },
   '/students': () => {
     template = nunjucks.render('students.html',{});
     appContent.innerHTML = template;

@@ -1,6 +1,7 @@
 import { studentsDATA } from '../services/fetchURL';
 import { removeDoublesInArray } from '../services/functions';
 import { Cards, randomBanner, Paginering } from '../components';
+import { displayedAmountsOnPages } from '../services/config';
 
 export const mainStudents = async () => {
   const filter = new Filtering;
@@ -12,7 +13,7 @@ export const mainStudents = async () => {
   randomBanner();
   
   await filter.mainFilter(data);
-  await paginering.mainPaginering('personCard');
+  await paginering.mainPaginering('personCard', displayedAmountsOnPages.students);
 };
 
 const displayStudents = async (data) => {
@@ -60,7 +61,7 @@ class Filtering {
       let generation = formData.get('generation');
       this.filterStudents(favovak, generation, data);
       const newPaginering = new Paginering;
-      newPaginering.mainPaginering('personCard');
+      newPaginering.mainPaginering('personCard', displayedAmountsOnPages.students);
     });
   }
 

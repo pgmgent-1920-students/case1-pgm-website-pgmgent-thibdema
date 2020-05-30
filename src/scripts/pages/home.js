@@ -1,7 +1,7 @@
 import { coursesDATA, blogPostsDATA, studentsDATA } from '../services/fetchURL';
 import { sortBlogPosts } from '../services/sortArray';
 import { Cards, randomBanner } from '../components';
-import { amountOfBlogPostsDisplayed, repeatArraySlider } from '../services/config';
+import { displayedAmountsOnPages, repeatArraySlider } from '../services/config';
 
 
 export const mainHome = async () => {
@@ -40,7 +40,7 @@ class Home {
     let data = await blogPostsDATA(), card = new Cards;
     let tempStr = '';
     const sortedData = sortBlogPosts(data);
-    sortedData.slice(0,amountOfBlogPostsDisplayed).forEach((e) => {
+    sortedData.slice(0,displayedAmountsOnPages.home_blogposts).forEach((e) => {
       tempStr += card.bigCard('blog', e);
     });
     
