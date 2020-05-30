@@ -80,6 +80,13 @@
         }
     }
 
+    &__reference {
+        font-size: 0.9rem;
+        &:before {
+            content: 'Referentie: ';
+        }
+    }
+
     &__contact {
         margin-bottom: 0.5rem;
     }
