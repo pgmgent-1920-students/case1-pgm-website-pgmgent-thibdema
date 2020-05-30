@@ -38,6 +38,7 @@ router.on({
   '/opleidingsinfo': () => {
     template = nunjucks.render('opleidingsinfo.html',{});
     appContent.innerHTML = template;
+    page.OPLEIDINGSINFO();
   },
   '/curriculum': () => {
     template = nunjucks.render('curriculum.html',{});

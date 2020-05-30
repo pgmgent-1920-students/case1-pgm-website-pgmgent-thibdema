@@ -12,10 +12,15 @@ import { mainContact } from './contact';
 import { mainMentors } from './mentors';
 import { mainMentorDetail } from './mentordetail';
 import { main404 } from './404';
+import { mainOpleidingsinfo } from './opleidingsinfo';
 
 class FunctionRouter {
   HOME() {
     mainHome();
+  }
+
+  OPLEIDINGSINFO() {
+    mainOpleidingsinfo();
   }
 
   CURRICULUM() {
