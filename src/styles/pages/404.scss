@@ -2,7 +2,8 @@
     #element {
         position: relative;
         canvas {
-            width: 100vw;
+            width: 100% !important;
+            margin: 0 auto;
         }
 
         .content {

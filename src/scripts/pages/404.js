@@ -11,7 +11,7 @@ export const main404 = async () => {
 const lol = (DOM) => {
   // Renderer
   const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(document.body.clientWidth, window.innerHeight);
+  renderer.setSize(document.body.clientWidth-200, window.innerHeight);
   renderer.outputEncoding = THREE.sRGBEncoding;
 
   // Canvas Element

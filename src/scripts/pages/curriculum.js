@@ -55,7 +55,7 @@ const fillContent = (data) => {
 
 const loopRows = (category, data) => {
   let tempStr = `<div class="curriculum__row large ${category}">`, year = 1, currentPeriod = 1;
-  for (let period = 0; period < heading[2].amount; period++) {
+  for (let period = 0; period < heading[2].amount; period += 2) {
     if (period > 3) {
       year = 2;
       currentPeriod = period - 3;
@@ -64,26 +64,54 @@ const loopRows = (category, data) => {
       currentPeriod = period +1;
     }
 
-    let tussen = false;
+    let firstContent = false;
+    let secondContent = false;
+    let firstFull = false;
+
     data.map((e) => {
       if(e.category == category) {
-        let exists = e.more.find((zoek) => zoek.periode == currentPeriod && zoek.year == year);
-        if(exists) {
-          tussen = `
-            <div class="curriculum__item__large ">
-              <div class="flip-card" id="vak" vak="${e.name}" vakID="${exists.id}">
+        let firstItem = e.more.find((zoek) => zoek.periode == currentPeriod && zoek.year == year);
+        let secondItem = e.more.find((zoek) => zoek.periode == currentPeriod+1 && zoek.year == year);
+
+        if(firstItem) {
+          (firstItem.fullsemester) ? firstFull = true : firstFull = false;
+          firstContent = `
+            <div class="curriculum__item__${(firstItem.fullsemester) ? 'semester' : 'large'}">
+              <div class="flip-card" id="vak" vak="${e.name}" vakID="${firstItem.id}">
                 <div class="flip-card-inner">
                   <div class="vakContent flip-card-front">
                     <div class="icon">${e.icon}</div>
-                    <div class="studiepunten">${exists.studiepunten} <abbr title="studiepunten">sp</abbr></div>
-                    ${e.name} ${(exists.part) ? exists.part : ''}
-                    <div class="uren">${exists.uur} <abbr title="uren per week">u/w</abbr></div>
+                    <div class="studiepunten">${firstItem.studiepunten} <abbr title="studiepunten">sp</abbr></div>
+                    ${e.name} ${(firstItem.part) ? firstItem.part : ''}
+                    <div class="uren">${firstItem.uur} <abbr title="uren per week">u/w</abbr></div>
                   </div>
                   <div class="hoverVak flip-card-back">
                     <div class="icon">${e.icon}</div>
-                    <div class="studiepunten">${exists.studiepunten} <abbr title="studiepunten">sp</abbr></div>
-                    ${exists.specific}
-                    <div class="uren">${exists.uur} <abbr title="uren per week">u/w</abbr></div>
+                    <div class="studiepunten">${firstItem.studiepunten} <abbr title="studiepunten">sp</abbr></div>
+                    ${firstItem.specific}
+                    <div class="uren">${firstItem.uur} <abbr title="uren per week">u/w</abbr></div>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        }
+
+        if(secondItem) {
+          secondContent = `
+            <div class="curriculum__item__${(secondItem.fullsemester) ? 'semester' : 'large'}">
+              <div class="flip-card" id="vak" vak="${e.name}" vakID="${secondItem.id}">
+                <div class="flip-card-inner">
+                  <div class="vakContent flip-card-front">
+                    <div class="icon">${e.icon}</div>
+                    <div class="studiepunten">${secondItem.studiepunten} <abbr title="studiepunten">sp</abbr></div>
+                    ${e.name} ${(secondItem.part) ? secondItem.part : ''}
+                    <div class="uren">${secondItem.uur} <abbr title="uren per week">u/w</abbr></div>
+                  </div>
+                  <div class="hoverVak flip-card-back">
+                    <div class="icon">${e.icon}</div>
+                    <div class="studiepunten">${secondItem.studiepunten} <abbr title="studiepunten">sp</abbr></div>
+                    ${secondItem.specific}
+                    <div class="uren">${secondItem.uur} <abbr title="uren per week">u/w</abbr></div>
                   </div>
                 </div>
               </div>
@@ -91,10 +119,13 @@ const loopRows = (category, data) => {
         }
       };
     });
-    if(tussen == false) {
-      tussen = `<div class="curriculum__item__large empty"></div>`;
+
+    (!firstContent) ? tempStr += `<div class="curriculum__item__large empty"></div>` : tempStr += firstContent;
+
+    if(!firstFull) {
+      (!secondContent) ? tempStr += `<div class="curriculum__item__large empty"></div>` : tempStr += secondContent;
     }
-    tempStr += tussen;
+
   }
   tempStr += '</div>';
   return tempStr;
@@ -151,10 +182,11 @@ const displaySpecificData = async (ChosenCourse, data, technologies) => {
 }
 
 const listTechnologies = (specDATA, technologies) => {
-  let tempStr = '';
-
-  specDATA.technologies.forEach((technology) => {
-    let currentTECH = technologies.find((e) => e.id == technology-1);
+  let tempStr = '', vaktechnologies, currentTECH;
+  console.log(technologies);
+  (specDATA.technologies == 'all') ? vaktechnologies = technologies : vaktechnologies = specDATA.technologies; 
+  vaktechnologies.forEach((technology) => {
+    (specDATA.technologies == 'all') ? currentTECH = technology : currentTECH = technologies.find((e) => e.id == technology-1);
     tempStr += `
     <li class="technology">
       <div class="technology__icon">
