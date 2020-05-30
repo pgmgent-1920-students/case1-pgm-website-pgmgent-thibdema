@@ -88,7 +88,7 @@ const loopRows = (category, data) => {
                   <div class="hoverVak flip-card-back">
                     <div class="icon">${e.icon}</div>
                     <div class="studiepunten">${firstItem.studiepunten} <abbr title="studiepunten">sp</abbr></div>
-                    ${firstItem.specific}
+                    ${(firstItem.specific) ? firstItem.specific : `${e.name} ${(firstItem.part) ? firstItem.part : ''}` }
                     <div class="uren">${firstItem.uur} <abbr title="uren per week">u/w</abbr></div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const loopRows = (category, data) => {
                   <div class="hoverVak flip-card-back">
                     <div class="icon">${e.icon}</div>
                     <div class="studiepunten">${secondItem.studiepunten} <abbr title="studiepunten">sp</abbr></div>
-                    ${secondItem.specific}
+                    ${(secondItem.specific) ? secondItem.specific : `${e.name} ${(secondItem.part) ? secondItem.part : ''}` }
                     <div class="uren">${secondItem.uur} <abbr title="uren per week">u/w</abbr></div>
                   </div>
                 </div>
