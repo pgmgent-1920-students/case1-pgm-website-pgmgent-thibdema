@@ -1,9 +1,12 @@
-import { postDATA } from '../services/fetchURL';
+import { postDATA, mentorsDATA } from '../services/fetchURL';
 import { sitemail } from '../services/config';
+import { Cards } from '../components';
 
-export const mainContact = () => {
+export const mainContact = async () => {
+  const contactsData = await mentorsDATA();
   mapbox();
   formProcessing();
+  new Contactpersonen(contactsData);
 }
 
 const mapbox = () => {
@@ -42,4 +45,25 @@ const formProcessing = () => {
     };
     postDATA(urlToSendMail, mailObject);
   });
+}
+
+class Contactpersonen {
+  constructor(data) {
+    this.DOM = document.querySelector('#smallCardList');
+    this.data = data;
+    this.contacts = this.filterContacts();
+    this.contacts.map((e) => this.DOM.innerHTML += this.createCards(e))
+  }
+
+  filterContacts() {
+    let arr = [];
+    this.data.map((e) => (e.contactpersoon) ? arr.push(e) : '');
+    return arr;
+  }
+
+  createCards(data) {
+    const cards = new Cards;
+
+    return cards.smallCard('mentors', data.id, `${data.fname} ${data.lname}`, data.functie, data.thumbnail);
+  }
 }

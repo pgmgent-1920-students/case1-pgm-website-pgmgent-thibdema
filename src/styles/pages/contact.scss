@@ -48,15 +48,69 @@
             margin: 0.5rem 0rem;
         }
     }
+
+    .contactpersons {
+        .smallCardList {
+            margin-top: 5rem;
+            .smallCard {
+                &__title {
+                    font-size: 1.25rem;
+                }
+
+                &__thumbnail {
+                    &__vak {
+                        font-size: 0.8rem;
+                        width: min-content;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1360px) {
+    .contact {
+        .contactpersons {
+            .smallCardList {
+                margin-top: 4rem;
+                .smallCard {
+                    &__title {
+                        font-size: 1.25rem;
+                    }
+    
+                    &__thumbnail {
+                        &__vak {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1140px) {
 }
 
 @media only screen and (max-width: 960px) {
+    .contact {
+        .contactpersons {
+            .smallCardList {
+                margin-top: 4rem;
+                .smallCard {
+                    &__title {
+                        font-size: 0.9rem;
+                    }
+    
+                    &__thumbnail {
+                        &__vak {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -64,6 +118,23 @@
         &__form {
             &__align {
                 width: 70%;
+            }
+        }
+
+        .contactpersons {
+            .smallCardList {
+                margin-top: 3rem;
+                .smallCard {
+                    &__title {
+                        font-size: 0.8rem;
+                    }
+    
+                    &__thumbnail {
+                        &__vak {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
             }
         }
     }
