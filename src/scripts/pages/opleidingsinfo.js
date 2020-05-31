@@ -1,9 +1,13 @@
-import { technologiesDATA } from '../services/fetchURL';
+import { technologiesDATA, casesDATA } from '../services/fetchURL';
 import { randomNumber } from '../services/functions';
 import { displayedAmountsOnPages } from '../services/config';
+import { Cards } from '../components';
 
 export const mainOpleidingsinfo = async () => {
   const technologyData = await technologiesDATA();
+  const casesData = await casesDATA();
+
+  new Cases(3, casesData);
   const technologies = new RandomTechnologies;
   // Load technologies
   technologies.mainTechnologies(technologyData);
@@ -47,5 +51,36 @@ class RandomTechnologies {
     BtnOtherTechs.addEventListener('click', (e) => {
       this.mainTechnologies(data);
     });
+  }
+}
+
+class Cases {
+  constructor(itemsDisplayed, data) {
+    this.DOM = document.querySelector('#cases');
+    this.itemsDisplayed = itemsDisplayed;
+    this.maxSize = data.length;
+    this.data = data;
+    this.mainCases();
+  }
+
+  mainCases() {
+    let tempStr = '';
+    const arr = this.getRandomCases();
+    arr.map((e) => tempStr += this.individualCase(this.data[e]));
+    this.DOM.innerHTML = tempStr;
+  }
+
+  getRandomCases() {
+    let newArr = [];
+    while(newArr.length < this.itemsDisplayed) {
+      let number = randomNumber(0, this.maxSize);
+      (!newArr.includes(number)) ? newArr.push(number) : '' ;
+    }
+    return newArr;
+  }
+
+  individualCase(e) {
+    const card = new Cards;
+    return card.smallCard(e.category, e.id, e.title, e.vak, e.thumbnail);
   }
 }

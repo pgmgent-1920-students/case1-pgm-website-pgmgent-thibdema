@@ -73,6 +73,13 @@ module.exports = (env, argv) => {
             name: '3d-models/[name].[hash:7].[ext]',
           },
         },
+        {
+          test: /\.(pdf)$/,
+          loader: 'file-loader',
+          options: {
+            name: 'documenten/[name].[hash:7].[ext]',
+          },
+        },
       ],
     },
 
@@ -102,6 +109,10 @@ module.exports = (env, argv) => {
         {
           from: './src/3d-models',
           to: '3d-models',
+        },
+        {
+          from: './src/documenten',
+          to: 'documenten',
         },
       ]),
       new HtmlWebpackPlugin({

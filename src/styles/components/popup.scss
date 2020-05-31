@@ -109,13 +109,51 @@
 }
 
 @media only screen and (max-width: 960px) {
+    .popup {
+        &__window {
+            &__content {
+                .technology {
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 720px) {
+    .popup {
+        &__window {
+            width: 100%;
+            top: 7rem;
+            bottom: 1rem;
+            &__close {
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                padding: 1rem 0.5rem;
+            }
 
+            &__content {
+                top: 0.5rem;
+                bottom: 0rem;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 500px) {
+    .popup {
+        &__window {
+            &__content {
+                .technology {
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 390px) {

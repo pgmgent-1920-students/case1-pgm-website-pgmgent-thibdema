@@ -26,6 +26,46 @@
             }
         }
     }
+
+    .cases {
+        background-color: var(--white-green);
+        text-align: center;
+    }
+
+    .documents {
+        table {
+            width: 60%;
+            .download, .icon {
+                font-size: 2rem;
+                text-align: center;
+            }
+            th {
+                padding: 0.75rem 0.5rem;
+                text-align: left;
+                background-color: var(--primary);
+                color: white;
+                border: 0.5px solid #ddd;
+                &:nth-child(odd) {
+                    text-align: center;
+                }
+            }
+
+            td {
+                border: 0.5px solid #ddd;
+                padding: 0.5rem
+            }
+
+            tr {
+                &:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1360px) {
