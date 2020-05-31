@@ -19,7 +19,7 @@ const showRows = (data) => {
 }
 
 const row = (direction,data) => {
-  const content = `<section class="container intro row ${direction}">
+  const content = `<section class="container ${(data.id == 0) ? 'intro' : ''} row ${direction}">
     <div>
       <div class="outer-div">
         <div class="inner-div" style="background-image: url(${data.thumbnail})"></div>
