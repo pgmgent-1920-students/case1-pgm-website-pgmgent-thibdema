@@ -1,0 +1,40 @@
+.social-media {
+    display: flex;
+    align-items: center;
+    &__item {
+        transition: 0.3s;
+        color: var(--white);
+        font-size: 2rem;
+        a {
+            color: var(--white);
+            &:hover {
+                transition: 0.3s;
+                color: var(--secondary);
+                transform: scale(1.2);
+            }
+        }
+        &:hover {
+            transition: 0.3s;
+            color: var(--secondary);
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 720px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+}

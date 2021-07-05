@@ -1,0 +1,212 @@
+$blue: #00a5d9;
+$green: #5ab946;
+$orange: #f58732;
+$rose: #d20082;
+$red: #ed0034;
+
+.curriculum {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: var(--white);
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 4px;
+        & > * {
+            margin: 2px;
+            background-color: #7e57c5;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        &__year {
+            width: 50%;
+        }
+        &__semester {
+            width: 25%;
+        }
+        &__period {
+            width: 12.5%;
+        }
+    }
+
+    .small {
+        height: 2rem;
+    }
+
+    .medium {
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    .large {
+        height: 6rem;
+    }
+
+    #curriculumVakken {
+        .curriculum__item__large {
+            cursor: pointer;
+            position: relative;
+            font-size: 0.8rem;
+            width: 12.5%;
+        }
+    }
+
+    .empty {
+        opacity: 0.5;
+    }
+
+    .Programming {
+        * {
+            background-color: $rose;
+        }
+    }
+
+    .Theory {
+        * {
+            background-color: $blue;
+        }
+    }
+
+    .Business {
+        * {
+            background-color: $green;
+        }
+    }
+
+    .Work {
+        * {
+            background-color: $red;
+        }
+    }
+
+    .Design {
+        * {
+            background-color: $orange;
+        }
+    }
+
+    .hoverVak {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vakContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .studiepunten {
+        position: absolute;
+        bottom: 3px;
+        left: 3px;
+    }
+
+    .uren {
+        position: absolute;
+        bottom: 3px;
+        right: 3px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+    }
+
+    .flip-card {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .curriculum {
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    .curriculum {
+        .small {
+            font-size: 0.9rem;
+            .curriculum__item__period {
+                font-size: 0.8rem;
+            }
+        }
+    
+        .medium {
+            font-size: 1rem;
+        }
+
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .curriculum {
+        .small {
+            font-size: 0.8rem;
+            .curriculum__item__period {
+                font-size: 0.6rem;
+            }
+        }
+    
+        .medium {
+            font-size: 0.9rem;
+        }
+
+        .large {
+            height: 4rem;
+        }
+
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .curriculum {
+        .small {
+            font-size: 0.6rem;
+            .curriculum__item__period {
+                font-size: 0.4rem;
+            }
+        }
+    
+        .medium {
+            font-size: 0.8rem;
+        }
+
+        #curriculumVakken {
+            .curriculum__item__large {
+                font-size: 0.3rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+}

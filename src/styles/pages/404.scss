@@ -1,0 +1,43 @@
+.error404 {
+    #element {
+        position: relative;
+        canvas {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+
+        .content {
+            position: absolute;
+            top: 1rem;
+            width: 100%;
+            h1 {
+                font-size: 42px;
+                color: var(--secondary);
+                font-weight: 900;
+            }
+
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1360px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 720px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+}

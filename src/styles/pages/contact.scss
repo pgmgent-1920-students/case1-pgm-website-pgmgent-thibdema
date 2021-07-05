@@ -1,0 +1,154 @@
+.contact {
+    &__form {
+        background-color: var(--white-green);
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        &__align {
+            width: 50%;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+
+            * {
+                background-color: var(--white-green);
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                border: 2px solid var(--primary-light);
+                box-sizing: border-box;
+                -webkit-transition: 0.3s;
+                transition: 0.3s;
+                outline: none;
+                &:focus {
+                    transition: 0.3s;
+                    border: 2px solid var(--primary);
+                    background-color: var(--white);
+                }
+            }
+            
+            &__identification {
+            }
+
+            &__text {
+                padding: 1rem 1rem 10rem 1rem;
+
+                &:focus {
+                    padding: 1rem 1rem 10rem 1rem;
+                }
+            }
+        }
+
+        &__button {
+            margin: 0.5rem 0rem;
+        }
+    }
+
+    .contactpersons {
+        .smallCardList {
+            margin-top: 5rem;
+            .smallCard {
+                &__title {
+                    font-size: 1.25rem;
+                }
+
+                &__thumbnail {
+                    &__vak {
+                        font-size: 0.8rem;
+                        width: min-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .contact {
+        .contactpersons {
+            .smallCardList {
+                margin-top: 4rem;
+                .smallCard {
+                    &__title {
+                        font-size: 1.25rem;
+                    }
+    
+                    &__thumbnail {
+                        &__vak {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    .contact {
+        .contactpersons {
+            .smallCardList {
+                margin-top: 4rem;
+                .smallCard {
+                    &__title {
+                        font-size: 0.9rem;
+                    }
+    
+                    &__thumbnail {
+                        &__vak {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .contact {
+        &__form {
+            &__align {
+                width: 70%;
+            }
+        }
+
+        .contactpersons {
+            .smallCardList {
+                margin-top: 3rem;
+                .smallCard {
+                    &__title {
+                        font-size: 0.8rem;
+                    }
+    
+                    &__thumbnail {
+                        &__vak {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+@media only screen and (max-width: 390px) {
+    .contact {
+        &__form {
+            &__align {
+                width: 100%;
+            }
+        }
+    }
+}

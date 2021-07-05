@@ -1,0 +1,115 @@
+header {
+    & nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .logo {
+            font-size: 2.5rem;
+        }
+        & ul {
+            display: flex;
+            & li {
+                margin-left: 4rem;
+                text-transform: capitalize;
+                & a {
+                    color: var(--primary);
+                }
+            }
+            & .activeNav {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    header {
+        & .invisible {
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    header {
+        & nav {
+            & ul {
+                & li {
+                    font-size: 1rem;
+                }
+            }
+            .logo {
+                font-size: 2.3rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    header {
+        & nav {
+            & ul {
+                & li {
+                    margin-left: 2rem;
+                    font-size: 0.9rem;
+                }
+            }
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    header {
+        & nav {
+            & ul {
+                & li {
+                    font-size: 0.8rem;
+                }
+            }
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+        background-color: var(--white);
+        margin: 0 0 !important;
+        max-width: 100vw !important;
+        & nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            & .logo {
+                margin: 0 auto;
+                font-size: 2.5rem;
+            }
+            & ul {
+                align-items: center;
+                flex-direction: column;
+                margin-top: 2rem;
+                & li {
+                    margin: 1rem 0rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        & .invisible {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+}

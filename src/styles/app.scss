@@ -1,0 +1,50 @@
+// 1 Base importing
+@import './base/reset.scss';
+@import './base/variables.scss';
+@import './base/fonts.scss';
+@import './base/typography.scss';
+@import './base/buttons.scss';
+
+// 2 Utils importing
+@import './utils/effects.scss';
+@import './utils/slider.scss';
+@import './utils/zoom-hover.scss';
+@import './utils/arrow.scss';
+@import './utils/flip-card.scss';
+
+// 3 Layout importing
+@import './layout/container.scss';
+@import './layout/sections.scss';
+@import './layout/row.scss';
+@import './layout/bg.scss';
+@import './layout/intro.scss';
+
+// 4 Components importing
+@import './components/logo.scss';
+@import './components/hamburgerbutton.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/main.scss';
+@import './components/social-media.scss';
+@import './components/banner.scss';
+@import './components/detail.scss';
+@import './components/bigCard.scss';
+@import './components/smallCard.scss';
+@import './components/personCard.scss';
+@import './components/filter.scss';
+@import './components/arrowUp.scss';
+@import './components/popup.scss';
+@import './components/paginering.scss';
+
+// 5 Pages importing
+@import './pages/home.scss';
+@import './pages/blog.scss';
+@import './pages/blogdetail.scss';
+@import './pages/curriculum.scss';
+@import './pages/404.scss';
+@import './pages/contact.scss';
+@import './pages/opleidingsinfo.scss';
+
+// 6 Themes importing
+
+// 7 Vendors importing

@@ -1,0 +1,16 @@
+.outer-div {
+    overflow: hidden; 
+}
+
+.inner-div, .inner-div__iframe {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+}
+
+.inner-div:hover {
+    transform: scale(1.05);
+}

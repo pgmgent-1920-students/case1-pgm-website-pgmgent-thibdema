@@ -1,0 +1,168 @@
+.opleidingsinfo {
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .technologies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2rem;
+            width: 70%;
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                img {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .cases {
+        background-color: var(--white-green);
+        text-align: center;
+    }
+
+    .documents {
+        table {
+            width: 60%;
+            .download, .icon {
+                font-size: 2rem;
+                text-align: center;
+            }
+            th {
+                padding: 0.75rem 0.5rem;
+                text-align: left;
+                background-color: var(--primary);
+                color: white;
+                border: 0.5px solid #ddd;
+                &:nth-child(odd) {
+                    text-align: center;
+                }
+            }
+
+            td {
+                border: 0.5px solid #ddd;
+                padding: 0.5rem
+            }
+
+            tr {
+                &:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 90%;
+            }
+        }
+
+        .documents {
+            table {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .opleidingsinfo {
+        .technologies {
+            h3 {
+                font-size: 1rem;
+                margin-bottom: 0rem;
+            }
+
+            &__content {
+                width: 80%;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                &__item {
+                    width: 26%;
+                    text-align: center;
+                    margin-bottom: 1rem;
+
+                    img {
+                        width: 70%;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .opleidingsinfo {
+        .technologies {
+            &__content {
+                width: 90%;
+            }
+        }
+
+        .documents {
+            table {
+                font-size: 0.8rem;
+                .download, .icon {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .opleidingsinfo {
+        .documents {
+            table {
+                font-size: 0.6rem;
+                .download, .icon {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.inverted {
+    filter: invert(100%);
+}
+
+.fullheight {
+    height: 100vw;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.invisible {
+    display: none;
+}
+
+.link_without_pointer {
+    cursor: pointer;
+}
+
+@keyframes bounce {  
+    50% {
+        transform: translateY(-20px);
+    }
+}

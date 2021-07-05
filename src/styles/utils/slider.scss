@@ -1,0 +1,75 @@
+
+$repeat-loop-array: 20;
+
+$students: 13;
+$students-item-width: 16rem;
+
+$courses: 9;
+$courses-item-width: 100%;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-100vw / 9 * 20))}
+}
+
+@keyframes scrollPause {
+	0% { transform: translateX(0); }
+}
+
+
+// Styling
+.slider {
+	background: white;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	&__track {
+		animation: scroll 40s linear infinite;
+		display: flex;
+        width: calc(100% * 9 * 20);
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 720px) {
+    .slider {
+        &__track {
+            animation: scroll 15s linear infinite;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .slider {
+        &__track {
+            animation: scroll 13s linear infinite;
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+}

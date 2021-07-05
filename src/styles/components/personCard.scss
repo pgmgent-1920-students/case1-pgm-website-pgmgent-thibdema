@@ -1,0 +1,188 @@
+.personCardList {
+    display: flex;
+    flex-wrap: wrap;
+    
+    & .personCard {
+        transition: 0.4s;
+        width: 18%;
+        border-radius: 0.25rem;
+        text-align: left;
+        background-color: var(--primary);
+        margin-bottom: 2rem;
+        margin-right: 2.5%;
+        position: relative;
+
+        &:hover {
+
+            & .inner-div {
+                transition: 0.3s;
+                transform: scale(1.05);
+            }
+
+            & .personCard__content {
+                transition: 0.4s;
+                z-index: 5;
+                opacity: 1;
+            }
+        }
+
+        & .outer-div {
+            width: 100%;
+            height: 20rem;
+            border-radius: 0.25rem;
+            position: relative;
+        }
+
+        &__content {
+            transition: 0.4s;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+
+            &__link {
+                color: var(--white);
+                text-align: center;
+                padding: 1rem 1.5rem;
+                z-index: 5;
+                border: 2px solid var(--white);
+                font-size: 1rem;
+                text-transform: uppercase;
+                &:hover {
+                    transition: 0.3s;
+                    color: var(--secondary);
+                    background-color: var(--white);
+                }
+            }
+
+            &__background {
+                background-color: var(--secondary);
+                border-radius: 0.25rem;
+                opacity: 0.8;
+                width: 100%;
+                position: absolute;
+                height: 20rem;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    .personCardList {
+        .personCard:nth-child(5n) {
+            &:nth-child(5n) {
+                margin-right: 0rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1360px) {
+    .personCardList {
+        .personCard:nth-child(4n) {
+            margin-right: 0rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 720px) {
+    .personCardList {
+        .personCard:nth-child(3n) {
+            margin-right: 0rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .personCardList {
+        .personCard:nth-child(2n) {
+            margin-right: 0rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .personCardList {
+        .personCard {
+            width: 23%;
+            margin-right: 2.66%;
+    
+            .outer-div {
+                height: 15rem;
+            }
+    
+            &__content {
+                &__background {
+                    height: 15rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    .personCardList {
+        .personCard {    
+            .outer-div {
+                height: 12rem;
+            }
+    
+            &__content {
+                &__background {
+                    height: 12rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .personCardList {
+        .personCard {
+            width: 32%;
+            margin-right: 2%;
+
+            .outer-div {
+                height: 15rem;
+            }
+
+            &__content {
+                display: none;
+                &__background {
+                    height: 15rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .personCardList {
+        .personCard {
+            width: 48%;
+            margin-right: 4%;
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .personCardList {
+        .personCard {
+            width: 100%;
+            margin-right: 0%;
+        }
+    }
+}

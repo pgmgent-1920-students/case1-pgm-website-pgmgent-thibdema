@@ -1,0 +1,120 @@
+.bigCardList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    
+    & .bigCard {
+        transition: 0.3s;
+        width: 48.5%;
+        border-radius: 0.25rem;
+        text-align: left;
+        background-color: var(--primary);
+        margin-bottom: 2rem;
+        padding: 1rem;
+
+        &:hover {
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
+        
+        &__text {
+            padding: 1rem 0rem 0.25rem 0rem;
+        }
+        &__title {
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 2rem;
+            padding-bottom: 0.25rem;
+        }
+        &__subtitle {
+            color: var(--white-green);
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        & .outer-div {
+            width: 100%;
+            height: 20rem;
+        }
+
+        &__thumbnail {
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .bigCardList {
+        .bigCard {
+
+            &__text {
+            }
+            &__title {
+                font-size: 1.5rem;
+            }
+            &__subtitle {
+                font-size: 1rem;
+            }
+            & .outer-div {
+                height: 15rem;
+            }
+    
+            &__thumbnail {
+    
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {  
+    .bigCardList {
+        .bigCard {
+            width: 49%;
+            
+            &__text {
+            }
+            &__title {
+                font-size: 1.1rem;
+            }
+            &__subtitle {
+                font-size: 0.8rem;
+            }
+            & .outer-div {
+                height: 10rem;
+            }
+    
+            &__thumbnail {
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .bigCardList {
+        .bigCard {
+            width: 100%;
+            &__title {
+                font-size: 1.2rem;
+            }
+            & .outer-div {
+                height: 18rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .bigCardList {
+        .bigCard {
+            & .outer-div {
+                height: 15rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+}

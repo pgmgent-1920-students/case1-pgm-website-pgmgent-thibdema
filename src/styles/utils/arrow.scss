@@ -1,0 +1,14 @@
+a {
+    &:hover {
+        & .arrow {
+            &__left {
+                transition: all 0.3s;
+                margin-right: 0.5rem;
+            }
+            &__right {
+                transition:all 0.3s;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

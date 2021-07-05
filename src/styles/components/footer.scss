@@ -1,0 +1,121 @@
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    & a {
+        color: var(--white);
+        &:hover {
+            transition: 0.2s;
+            color: var(--secondary);
+        }
+    }
+    & nav {
+        margin: 3rem auto;
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        text-transform: capitalize;
+        & article {
+            & li {
+                margin: 0.3rem 0rem;
+            }
+        }
+    }
+    & section {
+        margin: 8rem 0rem 1rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        article {
+            &:first-child {
+                font-size: 0.8rem;
+                & a {
+                    margin-right: 3rem;
+                }
+            }
+            &:last-child {
+                font-size: 1.8rem;
+                & .social-media__item {
+                    margin-left: 0.5rem;
+                }
+            }
+        } 
+        
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 960px) {
+    footer {
+        & h2 {
+            font-size: 1.1rem;
+        }
+        & li {
+            font-size: 0.8rem;
+        }
+        & section {
+            flex-direction: column;
+            & article:first-child {
+                margin-bottom: 1rem;
+                & a{
+                    margin-right: 1rem;
+                }
+            }      
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    footer {
+        & nav {
+            margin: 0 auto;
+            width: 60%;
+            flex-wrap: wrap;
+            & article {
+                padding-right: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+        & section {
+            margin: 0rem 0rem 1rem 0rem;
+            & article {
+                &:first-child {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    & a {
+                        margin: 0.2rem 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    footer {
+        & nav {
+            width: 65%;
+            & article {
+                padding-right: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    footer {
+        & nav {
+            & article {
+                width: 100%;
+                padding-right: 0rem;
+                text-align: center;
+            }
+        }
+    }
+}
